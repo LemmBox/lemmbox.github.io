@@ -476,7 +476,7 @@ var beepbox = (function (exports) {
     ]);
     Config.blackKeyNameParents = [-1, 1, -1, 1, -1, 1, -1, -1, 1, -1, 1, -1];
     Config.tempoMin = 1;
-    Config.tempoMax = 600;
+    Config.tempoMax = 1000;
     Config.octaveMin = -8;
     Config.octaveMax = 8;
     Config.echoDelayRange = 24;
@@ -45654,7 +45654,7 @@ You should be redirected to the song at:<br /><br />
             this.metronomeCountIn = window.localStorage.getItem("metronomeCountIn") != "false";
             this.metronomeWhileRecording = window.localStorage.getItem("metronomeWhileRecording") != "false";
             this.notesFlashWhenPlayed = window.localStorage.getItem("notesFlashWhenPlayed") == "true";
-            this.showOscilloscope = window.localStorage.getItem("showOscilloscope") != "false	";
+            this.showOscilloscope = window.localStorage.getItem("showOscilloscope") != "false";
             this.showSampleLoadingStatus = window.localStorage.getItem("showSampleLoadingStatus") != "false";
             this.showDescription = window.localStorage.getItem("showDescription") != "false";
             this.showInstrumentScrollbars = window.localStorage.getItem("showInstrumentScrollbars") == "true";
