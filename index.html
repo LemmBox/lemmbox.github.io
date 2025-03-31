@@ -7,6 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
+            <!-- <script src="/website/first_visit.js"></script> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
     <meta charset="utf-8" />
@@ -356,7 +357,7 @@
         // Slarmoo's Box plants
         "✨","🌈","🌧️","🪨","🐍","🌲","🌳","𓆏","🦀",
 		// LemmBox 
-			"🍋"
+			"🍋","it's called LemmBox, not LemonBox... come on Mid"
         ];
 
         if (Math.floor(Math.random() * 9) == 0) {
@@ -366,8 +367,8 @@
         const date = new Date();
 
         // UB birthday (june 4th)
-        if ((date.getDate() == 4) && date.getMonth() == 5) {
-            document.getElementById("goldboxPlant").innerHTML = "  🎂🎉";  
+        if ((date.getDate() == 7) && date.getMonth() == 1) {
+            document.getElementById("goldboxPlant").innerHTML = "  🍋🎂🎉 :D";  
         }
 
         function changeHotdogSize() {
