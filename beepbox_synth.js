@@ -418,7 +418,7 @@ var beepbox = (function (exports) {
     Config.attackVal = 0;
     Config.releaseVal = 0.25;
     Config.willReloadForCustomSamples = false;
-    Config.jsonFormat = "LemmBox";
+    Config.jsonFormat = "lemmbox";
     Config.scales = toNameMap([
         { name: "Free", realName: "chromatic", flags: [true, true, true, true, true, true, true, true, true, true, true, true] },
         { name: "Major", realName: "ionian", flags: [true, false, true, false, true, true, false, true, false, true, false, true] },
@@ -3906,7 +3906,7 @@ var beepbox = (function (exports) {
                 this.preset = instrumentObject["preset"] >>> 0;
             }
             if (instrumentObject["volume"] != undefined) {
-                if (format == "jummbox" || format == "midbox" || format == "synthbox" || format == "goldbox" || format == "paandorasbox" || format == "ultrabox") {
+                if (format == "jummbox" || format == "midbox" || format == "synthbox" || format == "goldbox" || format == "paandorasbox" || format == "ultrabox" || format == "lemmbox") {
                     this.volume = clamp(-Config.volumeRange / 2, (Config.volumeRange / 2) + 1, instrumentObject["volume"] | 0);
                 }
                 else {
@@ -5407,6 +5407,13 @@ var beepbox = (function (exports) {
                 charIndex++;
             }
             else if (variantTest == 0x75) {
+                fromBeepBox = false;
+                fromJummBox = false;
+                fromGoldBox = false;
+                fromUltraBox = true;
+                charIndex++;
+            }
+            else if (variantTest == 0x4c) {
                 fromBeepBox = false;
                 fromJummBox = false;
                 fromGoldBox = false;
@@ -7724,7 +7731,7 @@ var beepbox = (function (exports) {
             this.initToDefault(true);
             if (!jsonObject)
                 return;
-            if (jsonFormat == "auto") {
+            if (jsonFormat == "lemmbox") {
                 if (jsonObject["format"] == "BeepBox") {
                     if (jsonObject["riff"] != undefined) {
                         jsonFormat = "modbox";
@@ -8288,7 +8295,7 @@ var beepbox = (function (exports) {
     Song._latestGoldBoxVersion = 4;
     Song._oldestUltraBoxVersion = 1;
     Song._latestUltraBoxVersion = 5;
-    Song._variant = 0x75;
+    Song._variant = 0x4c;
     class PickedString {
         constructor() {
             this.delayLine = null;
