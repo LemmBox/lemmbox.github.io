@@ -669,7 +669,7 @@ var beepbox = (function (exports) {
         { name: "deep shift", voices: 2, spread: 12.03, offset: -17.01, expression: 0.85, sign: 1.2 },
         { name: "broke", voices: 2, spread: 0.000211, offset: -0.3, expression: 0.8, sign: 1.0 },
         { name: "vary", voices: 2, spread: 0.0018, offset: 0.0, expression: 0.85, sign: 1.6 },
-        { name: "lone fifth", voices: 2, spread: 0.0018, offset: 0.0, expression: 0.85, sign: 1.6 },
+        { name: "lone fifth", voices: 1, spread: 0.0, offset: 7.0, expression: 1.4, sign: 0.9 },
         { name: "alternate fifth", voices: 2, spread: 2.5, offset: -2.5, expression: 0.9, sign: 0.9 },
         { name: "offtune", voices: 2, spread: 0.40, offset: 0.40, expression: 0.9, sign: 0.9 },
         { name: "hold", voices: 2, spread: 0.003, offset: 0.0, expression: 0.8, sign: -2.5 },
@@ -11340,7 +11340,7 @@ var beepbox = (function (exports) {
             if (andResetChannels) {
                 this.pitchChannelCount = 3;
                 this.noiseChannelCount = 1;
-                this.modChannelCount = 0;
+                this.modChannelCount = 1;
                 for (let channelIndex = 0; channelIndex < this.getChannelCount(); channelIndex++) {
                     const isNoiseChannel = channelIndex >= this.pitchChannelCount && channelIndex < this.pitchChannelCount + this.noiseChannelCount;
                     const isModChannel = channelIndex >= this.pitchChannelCount + this.noiseChannelCount;
