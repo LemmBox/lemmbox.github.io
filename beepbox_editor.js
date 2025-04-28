@@ -45789,7 +45789,7 @@ You should be redirected to the song at:<br /><br />
             this.showFifth = window.localStorage.getItem("showFifth") == "true";
             this.notesOutsideScale = window.localStorage.getItem("notesOutsideScale") == "true";
             this.showLetters = window.localStorage.getItem("showLetters") != "false";
-            this.showChannels = window.localStorage.getItem("showChannels") == "true";
+            this.showChannels = window.localStorage.getItem("showChannels") != "false";
             this.showScrollBar = window.localStorage.getItem("showScrollBar") != "false";
             this.alwaysFineNoteVol = window.localStorage.getItem("alwaysFineNoteVol") != "false";
             this.displayVolumeBar = window.localStorage.getItem("displayVolumeBar") != "false";
