@@ -1,0 +1,358 @@
+{
+	"name": "Untitled",
+	"format": "lemmbox",
+	"version": 5,
+	"scale": "Free",
+	"customScale": [
+		true,
+		false,
+		true,
+		true,
+		false,
+		false,
+		false,
+		true,
+		true,
+		false,
+		true,
+		true
+	],
+	"key": "C",
+	"keyOctave": 0,
+	"introBars": 0,
+	"loopBars": 16,
+	"beatsPerBar": 8,
+	"ticksPerBeat": 8,
+	"beatsPerMinute": 120,
+	"reverb": 0,
+	"masterGain": 1,
+	"compressionThreshold": 1,
+	"limitThreshold": 1,
+	"limitDecay": 4,
+	"limitRise": 4000,
+	"limitRatio": 1,
+	"compressionRatio": 1,
+	"layeredInstruments": false,
+	"patternInstruments": false,
+	"channels": [
+		{
+			"type": "pitch",
+			"name": "",
+			"instruments": [
+				{
+					"type": "chip",
+					"volume": 0,
+					"eqFilter": [],
+					"eqFilterType": false,
+					"eqSimpleCut": 10,
+					"eqSimplePeak": 0,
+					"envelopeSpeed": 12,
+					"discreteEnvelope": false,
+					"preset": 64,
+					"eqSubFilters0": [],
+					"effects": [
+						"panning",
+						"transition type"
+					],
+					"transition": "interrupt",
+					"clicklessTransition": false,
+					"pan": 0,
+					"panDelay": 0,
+					"fadeInSeconds": 0,
+					"fadeOutTicks": -1,
+					"wave": "square",
+					"unison": "none",
+					"isUsingAdvancedLoopControls": false,
+					"chipWaveLoopStart": 0,
+					"chipWaveLoopEnd": 2,
+					"chipWaveLoopMode": 0,
+					"chipWavePlayBackwards": false,
+					"chipWaveStartOffset": 0,
+					"envelopes": []
+				}
+			],
+			"patterns": [
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				}
+			],
+			"sequence": [
+				1,
+				1,
+				1,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"octaveScrollBar": 2
+		},
+		{
+			"type": "pitch",
+			"name": "",
+			"instruments": [
+				{
+					"type": "chip",
+					"volume": 0,
+					"eqFilter": [],
+					"eqFilterType": false,
+					"eqSimpleCut": 10,
+					"eqSimplePeak": 0,
+					"envelopeSpeed": 12,
+					"discreteEnvelope": false,
+					"preset": 64,
+					"eqSubFilters0": [],
+					"effects": [
+						"panning",
+						"transition type"
+					],
+					"transition": "interrupt",
+					"clicklessTransition": false,
+					"pan": 0,
+					"panDelay": 0,
+					"fadeInSeconds": 0,
+					"fadeOutTicks": -1,
+					"wave": "square",
+					"unison": "none",
+					"isUsingAdvancedLoopControls": false,
+					"chipWaveLoopStart": 0,
+					"chipWaveLoopEnd": 2,
+					"chipWaveLoopMode": 0,
+					"chipWavePlayBackwards": false,
+					"chipWaveStartOffset": 0,
+					"envelopes": []
+				}
+			],
+			"patterns": [
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				}
+			],
+			"sequence": [
+				1,
+				1,
+				1,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"octaveScrollBar": 1
+		},
+		{
+			"type": "pitch",
+			"name": "",
+			"instruments": [
+				{
+					"type": "chip",
+					"volume": 0,
+					"eqFilter": [],
+					"eqFilterType": false,
+					"eqSimpleCut": 10,
+					"eqSimplePeak": 0,
+					"envelopeSpeed": 12,
+					"discreteEnvelope": false,
+					"preset": 65,
+					"eqSubFilters0": [],
+					"effects": [
+						"panning",
+						"transition type"
+					],
+					"transition": "interrupt",
+					"clicklessTransition": false,
+					"pan": 0,
+					"panDelay": 0,
+					"fadeInSeconds": 0,
+					"fadeOutTicks": -1,
+					"wave": "triangle",
+					"unison": "none",
+					"isUsingAdvancedLoopControls": false,
+					"chipWaveLoopStart": 0,
+					"chipWaveLoopEnd": 32,
+					"chipWaveLoopMode": 0,
+					"chipWavePlayBackwards": false,
+					"chipWaveStartOffset": 0,
+					"envelopes": []
+				}
+			],
+			"patterns": [
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				}
+			],
+			"sequence": [
+				1,
+				1,
+				1,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"octaveScrollBar": 0
+		},
+		{
+			"type": "drum",
+			"name": "",
+			"instruments": [
+				{
+					"type": "noise",
+					"volume": 0,
+					"eqFilter": [],
+					"eqFilterType": false,
+					"eqSimpleCut": 10,
+					"eqSimplePeak": 0,
+					"envelopeSpeed": 12,
+					"discreteEnvelope": false,
+					"preset": 1409,
+					"eqSubFilters0": [],
+					"eqSubFilters1": [],
+					"effects": [
+						"panning"
+					],
+					"pan": 0,
+					"panDelay": 0,
+					"fadeInSeconds": 0,
+					"fadeOutTicks": -1,
+					"wave": "white",
+					"unison": "none",
+					"envelopes": []
+				}
+			],
+			"patterns": [
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				},
+				{
+					"notes": []
+				}
+			],
+			"sequence": [
+				1,
+				1,
+				1,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			]
+		}
+	]
+}
