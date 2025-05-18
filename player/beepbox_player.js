@@ -9258,7 +9258,7 @@ var beepbox = (function (exports) {
                     else {
                         note.continuesLastPattern = false;
                     }
-                    if (format != "lemmbox" && instrument.modulators[mod] == Config.modulators.dictionary["tempo"].index) {
+                    if ((format != "lemmbox") && (format != "ultrabox") && instrument.modulators[mod] == Config.modulators.dictionary["tempo"].index) {
                         for (const pin of note.pins) {
                             const oldMin = 30;
                             const newMin = 1;
@@ -14322,7 +14322,7 @@ var beepbox = (function (exports) {
             this.initToDefault(true);
             if (!jsonObject)
                 return;
-            if (jsonFormat == "UltraBox") {
+            if (jsonFormat == "auto") {
                 if (jsonObject["format"] == "BeepBox") {
                     if (jsonObject["riff"] != undefined) {
                         jsonFormat = "modbox";
