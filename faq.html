@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' /> 
+    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="theme-color" content="#CCCCCC"/>
 	<meta property="og:image" content="/icon_maskable_192.png" />
 	<meta name="description" content="LemmBox is a mod of UltraBox." />
     <title>LemmBox FAQ</title>
+    </script>
+    <title>LemmBox Patch Notes</title>
     <style type="text/css">
 
         html {
@@ -20,28 +22,30 @@
         }
 
         body {
-            margin-left: 3vw;
-            margin-right: 3vw;
+            margin: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
         }
 
-       h1 {
+        h1 {
             font-size: 1.7rem;
             text-align: center;
-			align-items: center;
-            align-content: center;
             margin-top: 0.5em;
             margin-bottom: 0.5em;
             -webkit-text-stroke-width: 0;
         }
 
-        h2, summary {
+        h2 {
             font-size: 1.5rem;
-			font-weight: bold;
+            text-align: center;
             margin-top: 0.5em;
             margin-bottom: 0.5em;
             -webkit-text-stroke-width: 0;
+            /* color: #FF8EC5; */
         }
-		
 
         h3 {
             font-size: 1.2rem;
@@ -51,22 +55,109 @@
         }
 
         a {
-            color: var(--link-accent, #fff570);
+            color: var(--link-accent, #98f);
         }
-		.smalltip {
-	font-size:9px;
-	color: #868c95;
-	text-align: center;
-	font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-.backbutton {
-                position: relative;
-                margin: 50px;
+        button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            border: 0;
+            border-radius: 100px;
+            background-color: #fff570;
+            color: #020009;
+            font-weight: Bold;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+        }
+
+        button:hover {
+            background-color: #fff570;
+            box-shadow: 0 0 20px #fff57050;
+            transform: scale(1.1);
+        }
+
+        button:active {
+            background-color: #e6da4c;
+            transition: all 0.25s;
+            -webkit-transition: all 0.25s;
+            box-shadow: none;
+            transform: scale(0.98);
+        }
+
+        @media (min-width: 1100px) {
+            body {
+                width: 1100px;
             }
+            h2 {
+                width: 1100px;
+                align-items: start;
+                align-content: start;
+                border-top: #808080 solid 2px;
+                border-radius: 2px;
+                padding-top: 32px;
+            }
+        }
+        p {
+            font-size: 0.8rem;
+            color: #9C9BA3;
+        }
+        .backbuttondiv {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .headertext{
+            color: #fff570;
+            width: 100%;
+        }
+
+        a.link {
+            color: var(--secondary-text, rgb(193, 193, 193));
+            margin-left: 8px;
+        }
+
+        a.link:hover {
+            color: var(--secondary-text, rgb(233, 233, 233));
+        }
+
+        #popup {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #78c25a;
+            color: white;
+            margin-top: 15px;
+            padding: 10px 15px;
+            font-weight: bold;
+            border-radius: 4px;
+            opacity: 0;
+            transform: translateX(-100%); /* Start off-screen to the left */
+            transition: all 0.5s ease;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        #popup.show {
+            opacity: 1;
+            transform: translateX(0); /* Slide into position */
+            pointer-events: auto; /* Enable interactions when shown */
+        }
+        details {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .smalltip {
+            font-size:9px;
+            color: #868c95;
+            text-align: center;
+            font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+
     </style>
 </head>
 <body>
-    <button class="backbutton" onclick="history.back()">Go Back</button>
+    <button class="button" onclick="history.back()">Go Back</button>
 <h1>
 <font color="#fff570">Frequently Asked Questions</font>
 </h1>
@@ -101,11 +192,11 @@ Things I want to add:
    More note effects (ring modulation, phaser, reverse reverb ) </li>
 
 	<li>More themes</li>
-	
+
 	</ul>
 	<sub> if you want to help, Please reach out to me on discord or on github!</sub>
-</details>	
-	
+</details>
+
 <details>
 <summary>How do I add custom samples?</summary>
 Since LemmBox doesn't have a web server of its own, you'll have to first upload your sample to a CORS <sub class="smalltip">(Cross-Origin Resource Sharing)</sub> -friendly website.
@@ -158,7 +249,7 @@ Please be patient, I can't guarantee that anything will be out in a timely manne
 <summary>Where can I contact the developer?</summary>
 You can find me on many places! a few of those are, the BeepBox discord server [my username is happylemonlime] (you can join that <a href="https://discord.gg/QPCYnxV28q">here</a>), the BeepBox Modding server (you can join that <a href="https://discord.gg/Tc997TstJb">here</a>), my Bluesky account (you can find that <a href="https://bsky.app/profile/thehappylemonlime.bsky.social">here</a>)
 </details>
-	
+
 </body>
 </head>
 </html>
