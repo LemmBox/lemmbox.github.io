@@ -16,7 +16,7 @@
     <meta name="application-name" content="LemmBox" />
     <meta name="apple-mobile-web-app-title" content="LemmBox">
     <meta name="description" content="LemmBox is a mod of UltraBox." />
-    <meta name="keywords" content="chiptune, instrumental, music, song, melody, composition, tool, free, online, square wave, NES, NSF, ultrabox, beepbox, jummbox, pandorasbox, modbox, sandbox, goldbox, wackybox, todbox, LemmBox" />
+    <meta name="keywords" content="chiptune, instrumental, music, song, melody, composition, tool, free, online, square wave, NES, NSF, ultrabox, BeepBox, jummbox, pandorasbox, modbox, sandbox, goldbox, wackybox, todbox, LemmBox" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -49,7 +49,7 @@
             align-content: center;
         }
 
-        #beepboxEditorContainer {
+        #BeepBoxEditorContainer {
             min-height: 645px;
             overflow: auto;
             background: var(--editor-background, black);
@@ -179,7 +179,7 @@
             el.style.backgroundRepeat= "repeat";	
         }
     </script>
-    <div id="beepboxEditorContainer">
+    <div id="BeepBoxEditorContainer">
         <noscript>
             Sorry, LemmBox requires a JavaScript-enabled browser.
         </noscript>
@@ -194,9 +194,9 @@
             </h1>
             
             <p id="introduction">
-                LemmBox is a modification of UltraBox that tries to add featurs found in other mods alongside some of it's own. you can find the full feature set <a href="./lemmbox-features.html">here</a> This mod is based off of UltraBox. You can find UltraBox <a href="https://ultraabox.github.io">here</a>
+                LemmBox is a modification of UltraBox that tries to add features found in other mods alongside some of its own. you can find the full feature set <a href="./lemmbox-features.html">here</a> This mod is based off of UltraBox. You can find UltraBox <a href="https://ultraabox.github.io">here</a>
 				<br><br>
-                It takes elements from most of the beepbox mods available (see <a href="./credits.html">credits</a>) and puts them in one convenient package.
+                It takes elements from most of the BeeoBox mods available (see <a href="./credits.html">credits</a>) and puts them in one convenient package.
             </p>
             <!-- <p>
                 All song data is contained in the URL at the top of your browser.
@@ -296,8 +296,8 @@
                         Some features are hard to find anywhere though - for example, if your song has any modulator channels, you can hold Ctrl or Shift while the song is playing to record the movement of sliders directly! If you want to learn more tips, tricks, and best practices though, see below.
                     </p>
                     <p>
-						Want to see what people have made with BeepBox? Songs that were shared on Twitter prior to 2023-05-22 can now be browsed in <a href="https://twitter-archive.beepbox.co/" target="_blank">this interactive archive</a>!
-                        <!-- Additionally, there's an active <a href="https://discord.gg/beepbox">BeepBox Discord</a> where you can share songs and ask questions! -->
+						Want to see what people have made with BeepBox? Songs that were shared on Twitter prior to 2023-05-22 can now be browsed in <a href="https://twitter-archive.BeepBox.co/" target="_blank">this interactive archive</a>!
+                        <!-- Additionally, there's an active <a href="https://discord.gg/BeepBox">BeepBox Discord</a> where you can share songs and ask questions! -->
                     </p>
                 </section>
             </main>
@@ -308,7 +308,7 @@
   <p><aside class="bsky-column">
 				
 				<div>
-					<!-- <a class="bsky-timeline" data-width="300" data-height="2000" data-link-color="#9988ff" data-chrome="noheader nofooter transparent" data-dnt="true" data-theme="dark" href="https://twitter.com/beepboxco?ref_src=twsrc%5Etfw" target="_blank">Songs retweeted by @beepboxco</a> -->
+					<!-- <a class="bsky-timeline" data-width="300" data-height="2000" data-link-color="#9988ff" data-chrome="noheader nofooter transparent" data-dnt="true" data-theme="dark" href="https://twitter.com/BeepBoxco?ref_src=twsrc%5Etfw" target="_blank">Songs retweeted by @BeepBoxco</a> -->
                     <bsky-embed
 						feed="at://did:plc:mbrx5fkqsdgk5l2dfhygecm6/app.bsky.feed.generator/aaabsv7gjrgl2"
 						mode="dark"
@@ -330,8 +330,8 @@
     </div>
 
     <!--
-    Instead of loading js beepbox editor interface directly, test for browser support.
-    <script type="text/javascript" src="beepbox_editor.min.js"></script>
+    Instead of loading js BeepBox editor interface directly, test for browser support.
+    <script type="text/javascript" src="BeepBox_editor.min.js"></script>
     -->
     <script type="text/javascript">
 
@@ -357,7 +357,7 @@
         // Slarmoo's Box plants
         "✨","🌈","🌧️","🪨","🐍","🌲","🌳","𓆏","🦀",
 		// LemmBox 
-			"🍋","it's called LemmBox, not LemonBox... come on Mid"
+			"🍋","its called LemmBox, not LemonBox... come on Mid"
         ];
 
         if (Math.floor(Math.random() * 9) == 0) {
@@ -403,13 +403,13 @@
         }
 
         if (browserHasRequiredFeatures()) {
-            // Go ahead and load js beepbox editor interface:
+            // Go ahead and load js BeepBox editor interface:
             var fileref = document.createElement("script");
             fileref.setAttribute("type", "text/javascript");
-            fileref.setAttribute("src", "beepbox_editor.min.js");
+            fileref.setAttribute("src", "BeepBox_editor.min.js");
             document.head.appendChild(fileref);
         } else {
-            document.getElementById("beepboxEditorContainer").innerHTML = "Sorry, LemmBox doesn't support your browser. Try a recent version of Chrome, Firefox, Edge, Safari, or Opera.";
+            document.getElementById("BeepBoxEditorContainer").innerHTML = "Sorry, LemmBox doesn't support your browser. Try a recent version of Chrome, Firefox, Edge, Safari, or Opera.";
         }
 
 		// If the page was loaded with an old song version that old versions of BeepBox support,
