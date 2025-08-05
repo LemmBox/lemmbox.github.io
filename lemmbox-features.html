@@ -2,141 +2,235 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>lemmbox-features</title>
+<title>LemmBox - Features</title>
 	<style type="text/css">
 
-		html {
-			background: var(--page-margin, #020009);
-			overflow-x: hidden;
-			font-size: large;
-			font-family: 'B612', sans-serif;
-			line-height: 1.3;
-			color: var(--primary-text, white);
-		}
+html {
+    background: var(--page-margin, #020009);
+    overflow-x: hidden;
+    font-size: large;
+    font-family: 'B612', sans-serif;
+    line-height: 1.3;
+    color: var(--primary-text, white);
+}
 
-		body {
-			max-width: 1100px;
-			margin: auto;
-			padding: 1rem;
-		}
+body {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+}
 
-		h1 {
-			font-size: 1.7rem;
-			text-align: center;
-			margin-top: 0.5em;
-			margin-bottom: 0.5em;
-			-webkit-text-stroke-width: 0;
-		}
+h1 {
+    font-size: 1.7rem;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    -webkit-text-stroke-width: 0;
+}
 
-		h2 {
-			padding-top: 1rem;
-			margin-top: 2rem;
-			font-size: 1.5rem;
-		}
+h1.title {
+    color: #fff570;
+}
 
-		h3 {
-			font-size: 1.2rem;
-			margin-top: 0.5em;
-			margin-bottom: 0.5em;
-			-webkit-text-stroke-width: 0;
-		}
+h2 {
+    padding-top: 1rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
 
-		a {
-			color: var(--link-accent, #98f);
-		}
-		button {
-			margin-top: 15px;
-			padding: 10px 15px;
-			border: 0;
-			border-radius: 100px;
-			background-color: #fff570;
-			color: #020009;
-			font-weight: Bold;
-			transition: all 0.5s;
-			-webkit-transition: all 0.5s;
-		}
+h3 {
+    font-size: 1.2rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    -webkit-text-stroke-width: 0;
+}
 
-		button:hover {
-			background-color: #fff570;
-			box-shadow: 0 0 20px #fff57050;
-			transform: scale(1.1);
-		}
+p {
+    font-size: 0.8rem;
+    color: #9C9BA3;
+}
 
-		button:active {
-			background-color: #e6da4c;
-			transition: all 0.25s;
-			-webkit-transition: all 0.25s;
-			box-shadow: none;
-			transform: scale(0.98);
-		}
+a {
+    color: var(--link-accent, #98f);
+}
 
-		@media (min-width: 1100px) {
-			body {
-				width: 1100px;
-			}
-			h2 {
-				width: 1100px;
-				align-items: start;
-				align-content: start;
-				border-radius: 2px;
-				padding-top: 32px;
-			}
-		}
-		p {
-			font-size: 0.8rem;
-			color: #9C9BA3;
-		}
-		.backbuttondiv {
-			display: flex;
-			justify-content: center;
-			width: 100%;
-		}
-		.headertext{
-			color: #fff570;
-			width: 100%;
-		}
+a.link {
+    color: var(--secondary-text, rgb(193, 193, 193));
+    margin-left: 8px;
+}
+
+a.link:hover {
+    color: var(--secondary-text, rgb(233, 233, 233));
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #fff570;
+    color: #020009;
+    font-weight: bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+	cursor: pointer;
+}
+
+button:hover {
+    background-color: #fff570;
+    box-shadow: 0 0 20px #fff57050;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #e6da4c;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+label {
+    padding-right: 10px;
+    font-size: 1rem;
+}
+
+.backbuttondiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.headertext {
+    color: #fff570;
+    width: 100%;
+}
+
+#popup {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #78c25a;
+    color: white;
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+#popup.show {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.navbar {
+    color: #f2f3f5;
+    font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #020009;
+    text-align: left;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.col, .logo {
+    flex: 1 1 0px;
+}
+
+.navbartitle {
+    color: #f2f3f5;
+    background-color: #020009;
+    text-align: center;
+    font-family: 'B612', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+.navbarlinks {
+    color: #f2f3f5;
+    background-color: #020009;
+    text-align: right;
+    padding-left: 5px;
+    float: right;
+    font-family: 'B612', sans-serif;
+	cursor: pointer;
+}
+
+.logo-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.logo {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.logo-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: blur(8px) brightness(1.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.logo-wrapper:hover .logo {
+    transform: scale(1.1);
+}
+
+.logo-wrapper:hover .logo-glow {
+    opacity: 1;
+}
+
+@media (min-width: 1100px) {
+    body {
+        width: 1100px;
+    }
+
+    h2 {
+        width: 1100px;
+        align-items: start;
+        align-content: start;
+        border-radius: 2px;
+        padding-top: 32px;
+    }
+}
+
+.footertext {
+	font-size:11px;
+	color: #868c95;
+	text-align: center;
+	font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.footerlinks {
+  color: #f2f3f5;
+  font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: right;
+  padding-left: 5px;
+  float: right;
+  font-size: 11px;
+}
 
 
-
-		a.link {
-			color: var(--secondary-text, rgb(193, 193, 193));
-			margin-left: 8px;
-		}
-
-		a.link:hover {
-			color: var(--secondary-text, rgb(233, 233, 233));
-		}
-
-		#popup {
-			position: fixed;
-			bottom: 20px;
-			left: 20px;
-			background-color: #78c25a;
-			color: white;
-			margin-top: 15px;
-			padding: 10px 15px;
-			font-weight: bold;
-			border-radius: 4px;
-			opacity: 0;
-			transform: translateX(-100%);
-			transition: all 0.5s ease;
-			pointer-events: none;
-			z-index: 1000;
-		}
-
-
-		#popup.show {
-			opacity: 1;
-			transform: translateX(0);
-			pointer-events: auto;
-		}
-		h1.title {
-			color: #fff570;
-		}
-		label {
-			padding-right: 10px;
-			font-size: 1rem;
-		}
+.footer {
+    margin-top: auto;
+}
 
 
 
@@ -144,8 +238,21 @@
 	</style>
 </head>
 <body>
-<div class="backbuttondiv"><button class="backbutton" onclick="history.back()">Go Back</button></div>
-<h1 class="title">LemmBox list of complete features:</h1>
+
+<nav class="navbar">
+  <a title="Click to go back to homepage" href="https://lemmbox.github.io">
+    <div class="logo-wrapper">
+      <img src="theme_resources/LemmBoxLogo.png" alt="LemmBox" class="logo" height="64px">
+      <img src="theme_resources/LemmBoxLogo.png" alt="" class="logo-glow" height="64px" aria-hidden="true">
+    </div>
+  </a>
+  <div class="navbartitle col"><b>LemmBox - Features</b></div>
+  <div class="col">
+    <a class="navbarlinks" href="faq"><button>FAQ</button></a>
+    <a class="navbarlinks" href="patch_notes"><button>Patch Notes</button></a>
+    <a class="navbarlinks" onclick="history.back()"><button>Go Back</button></a>
+  </div>
+</nav>
 	
 	<h2>This mod is based off of UltraBox</h2>
 	<p>Meaning it has everything found in <a href="https://ultraabox.github.io">UltraBox 2.2.13</a> feel free to look on the BeepBox wiki for everything that is in UltraBox <a href="https://beepbox.miraheze.org/wiki/UltraBox#Version_History">right here</a>.</p>
@@ -167,7 +274,9 @@
   Your browser does not support the audio element.
 </audio>
 		<li>New theme "LemmBox Dark" <p>(Just called "LemmBox" in the theme selector as there is no LemmBox light mode yet</p></li>
-	</ul>
+        <li>Ability to export .txt files</li>
+        <li>Ability to export .png files</li>	
+    </ul>
 
 <h2>Stuff I am working on</h2>
 
@@ -183,6 +292,7 @@
 
 	<h2>Stuff I stole (with permission)</h2>
 	<p>All of the unisons in <a href="https://mid-the-modder.github.io/Midbox/">midbox</a>. That's right, all of them.</p>
+    <p>Exporting as .ogg and .ogx (opus) files, thank you <a href="https://choptop84.github.io/" >choptop84</a></p>
 <!--												VVV not yet, choptop told me it would be best to wait for 1.6-->
 	<!--	<p>The ring modulation and the phaser effect from <a href="https://choptop84.github.io/abyssbox-app/">abyssbox</a></p>-->
 
@@ -191,5 +301,16 @@
 <h2>Bugs I know about:</h2><p>If there is nothing here, that means I need to find some bugs! <br> If you know of any bugs, or just have issues in general, my discord is happylemonlime and I am active on the BeepBox discord server. Feel free to send me a DM! <br> You can also reach out to me on the <a href="https://github.com/LemmBox/lemmbox.github.io/issues">LemmBox issues page</a> on github.</p>
 <!--	<details><summary></summary></details>-->
 
+
+<div class="footer">
+<nav class="navbar">
+  <div class="col"></div>
+  <footer class="navbartitle col footertext">HappyLemonLime | LemmBox - Features </footer>
+  <div class="col">
+    <a class="footerlinks" href="https://lemmbox.github.io">Home</a>
+    <a class="footerlinks" href="#top">Back to top</a>
+  </div>
+</nav>
+</div>
 </body>
 </html>

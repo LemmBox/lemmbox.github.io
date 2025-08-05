@@ -6705,7 +6705,7 @@ var beepbox = (function (exports) {
     --ui-widget-focus: #2d293b;
     --pitch-background: #44444A;
     --tonic: #c2a855;
-    --fifth-note: #468;
+    --fifth-note: #7eb57d;
     --third-note: #486;
     --white-piano-key: #bbb;
     --black-piano-key: #444;
@@ -7747,6 +7747,7 @@ var beepbox = (function (exports) {
     ColorConfig.textSelection = "var(--text-selection, rgba(119,68,255,0.99))";
     ColorConfig.boxSelectionFill = "var(--box-selection-fill, rgba(255,255,255,0.2))";
     ColorConfig.loopAccent = "var(--loop-accent, #74f)";
+    ColorConfig.sampleFailed = "var(--sample-failed, #f00)";
     ColorConfig.linkAccent = "var(--link-accent, #98f)";
     ColorConfig.uiWidgetBackground = "var(--ui-widget-background, #444)";
     ColorConfig.uiWidgetFocus = "var(--ui-widget-focus, #777)";
@@ -7849,6 +7850,8 @@ var beepbox = (function (exports) {
     ColorConfig.modLabelPrimaryText = "var(--mod-label-primary-text, black)";
     ColorConfig.disabledNotePrimary = "var(--disabled-note-primary, #999)";
     ColorConfig.disabledNoteSecondary = "var(--disabled-note-secondary, #666)";
+    ColorConfig.scrollbarColor = "var(--scrollbar-color)";
+    ColorConfig.scrollbarBackground = "var(--scrollbar-background)";
     ColorConfig.c_pitchSecondaryChannelHue = 0;
     ColorConfig.c_pitchSecondaryChannelHueScale = 0;
     ColorConfig.c_pitchSecondaryChannelSat = 0;
@@ -8170,6 +8173,8 @@ var beepbox = (function (exports) {
                 { name: "crystal", midiProgram: 98, generalMidi: true, settings: { "type": "FM", "effects": "reverb", "transition": "hard fade", "chord": "harmony", "filterCutoffHz": 2828, "filterResonance": 14, "filterEnvelope": "twang 2", "vibrato": "delayed", "algorithm": "1 2 3 4", "feedbackType": "1⟲ 2⟲ 3⟲ 4⟲", "feedbackAmplitude": 4, "feedbackEnvelope": "twang 1", "operators": [{ "frequency": "1×", "amplitude": 10, "envelope": "custom" }, { "frequency": "3×", "amplitude": 7, "envelope": "custom" }, { "frequency": "6×", "amplitude": 4, "envelope": "custom" }, { "frequency": "13×", "amplitude": 4, "envelope": "custom" }] } },
                 { name: "tinkle bell", midiProgram: 112, generalMidi: true, settings: { "type": "FM", "effects": "reverb", "transition": "hard", "chord": "strum", "filterCutoffHz": 2828, "filterResonance": 14, "filterEnvelope": "twang 2", "vibrato": "none", "algorithm": "1 2 3 4", "feedbackType": "1→2→3→4", "feedbackAmplitude": 5, "feedbackEnvelope": "twang 3", "operators": [{ "frequency": "~2×", "amplitude": 7, "envelope": "custom" }, { "frequency": "5×", "amplitude": 7, "envelope": "custom" }, { "frequency": "7×", "amplitude": 7, "envelope": "custom" }, { "frequency": "16×", "amplitude": 7, "envelope": "custom" }] } },
                 { name: "agogo", midiProgram: 113, generalMidi: true, settings: { "type": "FM", "effects": "reverb", "transition": "hard fade", "chord": "strum", "filterCutoffHz": 4000, "filterResonance": 14, "filterEnvelope": "decay 1", "vibrato": "none", "algorithm": "1 2 3 4", "feedbackType": "1→4", "feedbackAmplitude": 15, "feedbackEnvelope": "decay 1", "operators": [{ "frequency": "2×", "amplitude": 9, "envelope": "custom" }, { "frequency": "5×", "amplitude": 6, "envelope": "custom" }, { "frequency": "8×", "amplitude": 9, "envelope": "custom" }, { "frequency": "13×", "amplitude": 11, "envelope": "custom" }] } },
+                { name: "summoning bell", generalMidi: false, settings: { "type": "Picked String", "volume": -15, "eqFilter": [], "eqFilterType": false, "eqSimpleCut": 10, "eqSimplePeak": 0, "envelopeSpeed": 12, "eqSubFilters0": [], "effects": ["panning", "chord type", "detune", "vibrato", "chorus", "reverb"], "chord": "strum", "fastTwoNoteArp": false, "arpeggioSpeed": 12, "strumParts": 1, "detuneCents": -40, "vibrato": "delayed", "vibratoDepth": 0.3, "vibratoDelay": 18.5, "vibratoSpeed": 10, "vibratoType": 0, "pan": 0, "panDelay": 10, "chorus": 29, "reverb": 100, "fadeInSeconds": 0, "fadeOutTicks": 96, "harmonics": [100, 0, 0, 100, 0, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "unison": "none", "stringSustain": 71, "envelopes": [], "isDrum": false } },
+                { name: "crystal bell", generalMidi: false, settings: { "type": "Picked String", "volume": -15, "eqFilter": [], "eqFilterType": false, "eqSimpleCut": 10, "eqSimplePeak": 0, "envelopeSpeed": 12, "eqSubFilters0": [], "effects": ["panning", "chord type", "vibrato", "chorus", "reverb"], "chord": "strum", "fastTwoNoteArp": false, "arpeggioSpeed": 12, "strumParts": 1, "vibrato": "delayed", "vibratoDepth": 0.3, "vibratoDelay": 18.5, "vibratoSpeed": 10, "vibratoType": 0, "pan": 0, "panDelay": 10, "chorus": 29, "reverb": 100, "fadeInSeconds": 0, "fadeOutTicks": 96, "harmonics": [100, 0, 0, 100, 0, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "unison": "none", "stringSustain": 71, "envelopes": [], "isDrum": false } },
             ])
         },
         {
@@ -8399,7 +8404,6 @@ var beepbox = (function (exports) {
                 { name: "crystal bell", generalMidi: false, settings: { "type": "Picked String", "volume": -15, "eqFilter": [], "eqFilterType": false, "eqSimpleCut": 10, "eqSimplePeak": 0, "envelopeSpeed": 12, "eqSubFilters0": [], "effects": ["panning", "chord type", "vibrato", "chorus", "reverb"], "chord": "strum", "fastTwoNoteArp": false, "arpeggioSpeed": 12, "strumParts": 1, "vibrato": "delayed", "vibratoDepth": 0.3, "vibratoDelay": 18.5, "vibratoSpeed": 10, "vibratoType": 0, "pan": 0, "panDelay": 10, "chorus": 29, "reverb": 100, "fadeInSeconds": 0, "fadeOutTicks": 96, "harmonics": [100, 0, 0, 100, 0, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "unison": "none", "stringSustain": 71, "envelopes": [], "isDrum": false } },
                 { name: "otherworldly steelpan", generalMidi: false, settings: { "type": "FM6op", "volume": 0, "eqFilter": [{ "type": "low-pass", "cutoffHz": 125, "linearGain": 2 }], "eqFilterType": false, "eqSimpleCut": 10, "eqSimplePeak": 0, "envelopeSpeed": 12, "discreteEnvelope": false, "eqSubFilters0": [{ "type": "low-pass", "cutoffHz": 125, "linearGain": 2 }], "effects": ["panning", "vibrato", "note filter", "distortion", "chorus", "echo", "reverb"], "vibrato": "custom", "vibratoDepth": 0.28, "vibratoDelay": 19, "vibratoSpeed": 2, "vibratoType": 0, "noteFilterType": false, "noteSimpleCut": 10, "noteSimplePeak": 0, "noteFilter": [{ "type": "low-pass", "cutoffHz": 840.9, "linearGain": 1 }, { "type": "high-pass", "cutoffHz": 420.45, "linearGain": 1.4142 }], "noteSubFilters0": [{ "type": "low-pass", "cutoffHz": 840.9, "linearGain": 1 }, { "type": "high-pass", "cutoffHz": 420.45, "linearGain": 1.4142 }], "distortion": 0, "aliases": false, "pan": 0, "panDelay": 0, "chorus": 14, "echoSustain": 57, "echoDelayBeats": 1.5, "reverb": 58, "fadeInSeconds": 0.0263, "fadeOutTicks": -6, "algorithm": "1 2 3 (4 5)←6", "feedbackType": "3→4", "feedbackAmplitude": 0, "operators": [{ "frequency": "0.5×", "amplitude": 6, "waveform": "trapezoid", "pulseWidth": 5 }, { "frequency": "1×", "amplitude": 7, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "0.5×", "amplitude": 10, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "0.12×", "amplitude": 7, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "0.25×", "amplitude": 6, "waveform": "trapezoid", "pulseWidth": 5 }, { "frequency": "16×", "amplitude": 0, "waveform": "sine", "pulseWidth": 5 }], "envelopes": [{ "target": "operatorAmplitude", "envelope": "punch", "index": 5 }, { "target": "noteVolume", "envelope": "punch" }], "isDrum": false } },
                 { name: "calm light", generalMidi: false, settings: { "type": "FM", "volume": 0, "eqFilter": [{ "type": "low-pass", "cutoffHz": 19027.31, "linearGain": 0.7071 }], "eqFilterType": true, "eqSimpleCut": 10, "eqSimplePeak": 0, "envelopeSpeed": 12, "eqSubFilters1": [], "effects": ["panning", "vibrato", "reverb"], "vibrato": "custom", "vibratoDepth": 0.32, "vibratoDelay": 19, "vibratoSpeed": 3, "vibratoType": 0, "pan": 0, "panDelay": 10, "reverb": 58, "fadeInSeconds": 0.1575, "fadeOutTicks": 24, "algorithm": "1←(2 3 4)", "feedbackType": "1⟲", "feedbackAmplitude": 0, "operators": [{ "frequency": "1×", "amplitude": 10, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "1×", "amplitude": 4, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "1×", "amplitude": 7, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "1×", "amplitude": 3, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "1×", "amplitude": 0, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "1×", "amplitude": 0, "waveform": "sine", "pulseWidth": 5 }], "envelopes": [{ "target": "noteVolume", "envelope": "swell 1" }], "isDrum": false } },
-                { name: "Nebula Veil", generalMidi: false, settings: { "type": "FM6op", "volume": -12, "eqFilter": [{ "type": "low-pass", "cutoffHz": 9500, "linearGain": 1.0 }, { "type": "high-shelf", "cutoffHz": 16000, "linearGain": 0.8 }], "eqFilterType": false, "eqSimpleCut": 10, "eqSimplePeak": 0, "envelopeSpeed": 10, "discreteEnvelope": false, "eqSubFilters0": [], "effects": ["panning", "vibrato", "reverb", "chorus"], "transition": "slide", "clicklessTransition": true, "vibrato": "custom", "vibratoDepth": 0.15, "vibratoDelay": 12, "vibratoSpeed": 3, "vibratoType": 0, "pan": 0, "panDelay": 6, "reverb": 85, "chorus": 22, "fadeInSeconds": 0.08, "fadeOutTicks": 32, "algorithm": "1←2←(3 4)←(5 6)", "feedbackType": "2⟲", "feedbackAmplitude": 0.2, "operators": [{ "frequency": "1×", "amplitude": 12, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "1×", "amplitude": 8, "waveform": "triangle", "pulseWidth": 5 }, { "frequency": "2×", "amplitude": 4, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "0.5×", "amplitude": 6, "waveform": "triangle", "pulseWidth": 5 }, { "frequency": "3×", "amplitude": 2, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "0.25×", "amplitude": 3, "waveform": "sine", "pulseWidth": 5 }], "envelopes": [{ "target": "noteVolume", "envelope": "swell 2" }, { "target": "operatorAmplitude", "envelope": "twang 1", "index": 3 }], "isDrum": false } },
                 { name: "mellow triangle", generalMidi: false, settings: { "type": "custom chip", "volume": -5, "eqFilter": [{ "type": "high-pass", "cutoffHz": 250, "linearGain": 0.5 }], "eqFilterType": false, "eqSimpleCut": 10, "eqSimplePeak": 0, "envelopeSpeed": 12, "eqSubFilters0": [{ "type": "high-pass", "cutoffHz": 250, "linearGain": 0.5 }], "effects": ["panning", "chord type", "detune", "vibrato", "chorus", "echo", "reverb"], "chord": "simultaneous", "fastTwoNoteArp": false, "arpeggioSpeed": 12, "detuneCents": -40, "vibrato": "custom", "vibratoDepth": 0.28, "vibratoDelay": 6, "vibratoSpeed": 10, "vibratoType": 0, "pan": 0, "panDelay": 10, "chorus": 29, "echoSustain": 29, "echoDelayBeats": 0.25, "reverb": 19, "fadeInSeconds": 0, "fadeOutTicks": 12, "unison": "none", "wave": "square", "customChipWave": { "0": -1, "1": -1, "2": -4, "3": -4, "4": -8, "5": -8, "6": -11, "7": -11, "8": -14, "9": -14, "10": -17, "11": -17, "12": -20, "13": -20, "14": -24, "15": -24, "16": -23, "17": -23, "18": -20, "19": -20, "20": -17, "21": -17, "22": -14, "23": -14, "24": -11, "25": -11, "26": -7, "27": -7, "28": -4, "29": -4, "30": -1, "31": -1, "32": 2, "33": 2, "34": 5, "35": 5, "36": 8, "37": 8, "38": 12, "39": 12, "40": 15, "41": 15, "42": 18, "43": 18, "44": 21, "45": 21, "46": 24, "47": 24, "48": 24, "49": 24, "50": 21, "51": 21, "52": 18, "53": 18, "54": 15, "55": 15, "56": 12, "57": 12, "58": 8, "59": 8, "60": 5, "61": 5, "62": 2, "63": 2 }, "customChipWaveIntegral": { "0": 0, "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0, "10": 0, "11": 0, "12": 0, "13": 0, "14": 0, "15": 0, "16": 0, "17": 0, "18": 0, "19": 0, "20": 0, "21": 0, "22": 0, "23": 0, "24": 0, "25": 0, "26": 0, "27": 0, "28": 0, "29": 0, "30": 0, "31": 0, "32": 0, "33": 0, "34": 0, "35": 0, "36": 0, "37": 0, "38": 0, "39": 0, "40": 0, "41": 0, "42": 0, "43": 0, "44": 0, "45": 0, "46": 0, "47": 0, "48": 0, "49": 0, "50": 0, "51": 0, "52": 0, "53": 0, "54": 0, "55": 0, "56": 0, "57": 0, "58": 0, "59": 0, "60": 0, "61": 0, "62": 0, "63": 0, "64": 0 }, "envelopes": [], "isDrum": false } },
             ]) },
     ]);
@@ -21306,7 +21310,22 @@ var beepbox = (function (exports) {
                     event.preventDefault();
                 }
                 break;
+            case 71:
+                shortenUrl();
+                event.preventDefault();
+                break;
+            case 67:
+                onCopyClicked();
+                break;
         }
+    }
+    function shortenUrl() {
+        hashUpdatedExternally();
+        let shortenerStrategy = "https://tinyurl.com/api-create.php?url=";
+        const localShortenerStrategy = window.localStorage.getItem("shortenerStrategySelect");
+        if (localShortenerStrategy == "isgd")
+            shortenerStrategy = "https://is.gd/create.php?format=simple&url=";
+        window.open(shortenerStrategy + encodeURIComponent(new URL("#" + synth.song.toBase64String(), location.href).href));
     }
     function onCopyClicked() {
         let nav;

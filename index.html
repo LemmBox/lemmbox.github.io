@@ -10,6 +10,8 @@
             <!-- <script src="/website/first_visit.js"></script> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script src="hotdog.js"></script>
+    <!-- <script src="lemonclicker.js"></script> -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LemmBox</title>
@@ -29,16 +31,22 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/icon_32.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link href="https://fonts.googleapis.com/css?family=B612" rel="stylesheet" media="none" onload="if (this.media != 'all') this.media='all';" /> <!-- this is a trick to load CSS asynchronously. -->
-    <style type="text/css">
 
-        html {
-            background: var(--page-margin, black);
-            overflow-x: hidden;
-            font-size: large;
-            font-family: 'B612', sans-serif;
-            line-height: 1.3;
-            color: var(--primary-text, white);
-        }
+
+
+
+<style type="text/css">
+
+
+
+html {
+    background: var(--page-margin, black);
+    overflow-x: hidden;
+    font-size: large;
+    font-family: 'B612', sans-serif;
+    line-height: 1.3;
+    color: var(--primary-text, white);
+}
 
         body {
             margin: auto;
@@ -47,6 +55,7 @@
             flex-direction: column;
             align-items: center;
             align-content: center;
+            
         }
 
         #beepboxEditorContainer {
@@ -68,7 +77,6 @@
             padding-right: 30px;
         }
 
-        #Hotdog { display: none; }
 
         h1 {
             font-size: 1.7rem;
@@ -79,20 +87,8 @@
             color: var(--mod-title, #fff570);
         }
 
-        h2 {
-            font-size: 1.5rem;
-            text-align: center;
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-            -webkit-text-stroke-width: 0;
-        }
-
-        .centerDiv {
-			margin: 0px auto;
-		}
-
         a {
-            color: var(--link-accent, #98f);
+            color: var(--link-accent, #fff570);
         }
 
         .donation form {
@@ -131,6 +127,7 @@
 
             .instructions-column {
 				min-width: 0;
+                
             }
 
             .bsky-column {
@@ -167,8 +164,181 @@
 	font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.navbar {
+    color: #f2f3f5;
+    font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #00000000;
+    text-align: left;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.col, .logo {
+    flex: 1 1 0px;
+}
+
+.navbartitle {
+    color: #f2f3f5;
+    background-color: #00000000;
+    text-align: center;
+    font-family: 'B612', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    position: relative;
+    transform: none;
+    left: auto;
+    top: auto;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.navbar-section.left-buttons {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbarlinks {
+    color: #f2f3f5;
+    background-color: #00000000;
+    text-align: right;
+    padding-left: 5px;
+    float: right;
+    font-family: 'B612', sans-serif;
+	cursor: pointer;
+}
+
+.logo-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.logo {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.logo-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: blur(8px) brightness(1.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.logo-wrapper:hover .logo {
+    transform: scale(1.1);
+}
+
+.logo-wrapper:hover .logo-glow {
+    opacity: 1;
+}
+
+
+.footertext {
+	font-size:11px;
+	color: #868c95;
+	text-align: center;
+	font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.footerlinks {
+  color: #f2f3f5;
+  font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: right;
+  padding-left: 5px;
+  float: right;
+  font-size: 11px;
+}
+
+
+.footer {
+    margin-top: auto;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #fff570;
+    color: #020009;
+    font-weight: bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 0 20px #fff57050;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #e6da4c;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+
+#Hotdog {
+transition: transform 0.3s ease;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.nosel {
+    user-select: none;
+}
+
+.shopitem {
+    margin-top: 5px;
+    padding: 10px 10px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #fff570;
+    color: #020009;
+    font-weight: bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    cursor: pointer;
+    text-align: center;
+}
+
     </style>
 </head>
+
+            <audio id="squish1" src="media/squish1.mp3" type="audio/mpeg"></audio>
+            <audio id="squish2" src="media/squish2.mp3" type="audio/mpeg"></audio>
+            <audio id="squish3" src="media/squish3.mp3" type="audio/mpeg"></audio>
+            <audio id="explode" src="media/explode.mp3" type="audio/mpeg"></audio>
+            <audio id="click1" src="media/click1.mp3" type="audio/mpeg"></audio>
+            <audio id="click2" src="media/click2.mp3" type="audio/mpeg"></audio>
+            <audio id="click3" src="media/click3.mp3" type="audio/mpeg"></audio>
+
+
 <body id="secondImage">
     <script>
         const image = localStorage.getItem('customTheme2');
@@ -186,15 +356,29 @@
     </div>
     <div id="text-content">
         <section>
+<nav class="navbar">
+  <!-- <div id="NavButtons" class="navbar-section left-buttons">
+    <a class="navbarlinks" href="patch_notes"><button>Patch Notes</button></a>
+  </div>     -->
+  
 
-            <h1>
-                <font>LemmBox</font>
-                <span id="goldboxPlant" style="display: inline; color:#62a13b"></span>
-                <!-- <span id="goldboxPlant" style="display: inline; color: var(--plant-color, var(--link-accent, #62a13b));"></span> -->
-            </h1>
-            
+<div>
+    
+</div>
+
+
+  <div class="navbartitle">
+    <h1><font id="LemmClicker">LemmBox</font><span id="goldboxPlant" style="display: inline; color:#62a13b"></span></h1>
+    <!-- <details>
+        <summary>Shop</summary>
+        <button class="shopitem" id="tree" ><img src="media/Tree.png" width="64px" height="64px">Tree + 0.1 per sec</button>
+        <button class="shopitem" id="lemonTree" ><img src="media/LemonTree.png" width="64px" height="64px">Tree + 1 per sec</button>
+    </details> -->
+</div>
+</nav>
+
             <p id="introduction">
-                LemmBox is a modification of UltraBox that tries to add features found in other mods alongside some of its own. you can find the full feature set <a href="./lemmbox-features.html">here</a> This mod is based off of UltraBox. You can find UltraBox <a href="https://ultraabox.github.io">here</a>
+                LemmBox is a modification of UltraBox that tries to add features found in other mods alongside some of its own. You can find the full feature set <a href="./lemmbox-features.html">here</a> This mod is based off of UltraBox. You can find UltraBox <a href="https://ultraabox.github.io">here</a>
 				<br><br>
                 It takes elements from most of the beepbox mods available (see <a href="./credits.html">credits</a>) and puts them in one convenient package.
             </p>
@@ -221,6 +405,30 @@
         would be appreciated!
     </div>
     -->
+
+<details>
+  <summary class="bsky-dropdown">Songs shared on Bluesky <a class="dropdown-info"> (dropdown click the triangle!!)</a> </summary> 
+				 
+  <p><aside class="bsky-column">
+				
+				<div>
+					<!-- <a class="bsky-timeline" data-width="300" data-height="2000" data-link-color="#9988ff" data-chrome="noheader nofooter transparent" data-dnt="true" data-theme="dark" href="https://twitter.com/beepboxco?ref_src=twsrc%5Etfw" target="_blank">Songs retweeted by @beepboxco</a> -->
+                    <bsky-embed
+						feed="at://did:plc:mbrx5fkqsdgk5l2dfhygecm6/app.bsky.feed.generator/aaabsv7gjrgl2"
+						mode="dark"
+						link-target="_blank"
+						link-image="false"
+						limit="5"
+						load-more="true"
+						disable-styles="false"
+						custom-styles="a.mt-4.rounded-md.border.border-slate-300.block {display: none;} .flex > div { max-width: 90%; } .whitespace-pre-wrap { word-wrap: break-word;}"
+					  >
+					  </bsky-embed>
+					<script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
+				</div>
+			</aside></p>
+</details>
+
         </section>
 
         <div class="column-container">
@@ -270,6 +478,7 @@
 							<li><b>F/H</b>: move to First or Highlighted pattern </li>
 							<li><b>Shift & Drag</b>: select part of a pattern</li>
 							<li>These are just a few shortcuts, check LemmBox's edit menu for more!</li>
+                            <li><b>G</b>: Shorten song URL</li>
                             <!-- need to edit this eventually -->
                         </ul>
                     </div>
@@ -301,126 +510,116 @@
                     </p>
                 </section>
             </main>
-			
-			 <details>
-  <summary class="bsky-dropdown">Songs shared on Bluesky <a class="dropdown-info"> (dropdown click the triangle!!)</a> </summary> 
-				 
-  <p><aside class="bsky-column">
-				
-				<div>
-					<!-- <a class="bsky-timeline" data-width="300" data-height="2000" data-link-color="#9988ff" data-chrome="noheader nofooter transparent" data-dnt="true" data-theme="dark" href="https://twitter.com/beepboxco?ref_src=twsrc%5Etfw" target="_blank">Songs retweeted by @beepboxco</a> -->
-                    <bsky-embed
-						feed="at://did:plc:mbrx5fkqsdgk5l2dfhygecm6/app.bsky.feed.generator/aaabsv7gjrgl2"
-						mode="dark"
-						link-target="_blank"
-						link-image="false"
-						limit="5"
-						load-more="true"
-						disable-styles="false"
-						custom-styles="a.mt-4.rounded-md.border.border-slate-300.block {display: none;} .flex > div { max-width: 90%; } .whitespace-pre-wrap { word-wrap: break-word;}"
-					  >
-					  </bsky-embed>
-					<script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
-				</div>
-			</aside></p>
-</details> 
+		
 			
             
         </div>
     </div>
 
+
     <!--aa
     Instead of loading js beepbox editor interface directly, test for browser support.
     <script type="text/javascript" src="beepbox_editor.min.js"></script>
     -->
-    <script type="text/javascript">
 
-        // Randomize display of header
-        // 1-in-9 chance to appear
+    
 
-        const plants = [
+<script type="text/javascript">
+
+    // Randomize display of header
+
+    const plants = [
         // jummbox/goldbox plants    
-        "🍂", "🌿", "🌺", "🍃", "🍄", "🍀🌷", "🌈🍂🍁🍀🌷🍄🐲🌈🍃🌺🍄", " 1️⃣3️⃣1️⃣2️⃣",
+        "🍂", "🌿", "🌺", "🍃", "🍄", "🍀🌷", " 1️⃣3️⃣1️⃣2️⃣", "🌈🍂🍁🍀🌷🍄🐲🌈🍃🌺🍄",
         // blubox plants
         "≽(◕ ᴗ ◕)≼", "≽(ᴗ _ ᴗ)≼", "≽(⌐ _ ⌐)≼", "≽(ᵕ ‿ ᵕ)≼", 
         // familiarbox plant (there were others, but the code of familiarbox is long gone)
-        // this is a reference to (now outdated?) lore jinx made for one of their projects 
         "☀️⭐🕒👁️",
         // suggested by mel, meant to supplement the lack of a worm logo
         "🪱",
-        // plant originally suggested by mel in reference to the "(don't) eat thegubbys" meme. has now been reduced to just the fish emoji
+        // plant originally suggested by mel in reference to the "(don't) eat thegubbys" meme
         "🐟",
         // blubox desktop plants 
-        "⚡","🔵","💫",
+        "⚡", "🔵", "💫",
         // dogebox2 plants 
-        "🍕","🌭","🍔","🍟",
+        "🍕", '<img id="Hotdog" src="theme_resources/hotdog.png" width="62.5" height="41.625" onclick="myFunction()"> <audio id="squish1" src="media/squish1.mp3" type="audio/mpeg"></audio><audio id="squish2" src="media/squish2.mp3" type="audio/mpeg"></audio><audio id="squish3" src="media/squish3.mp3" type="audio/mpeg"></audio>', "🍔", "🍟",
         // Slarmoo's Box plants
-        "✨","🌈","🌧️","🪨","🐍","🌲","🌳","𓆏","🦀",
-		// LemmBox 
-			"🍋","it's called LemmBox, not LemonBox... come on Mid"
-        ];
+        "✨", "🌈", "🌧️", "🪨", "🐍", "🌲", "🌳", "𓆏", "🦀",
+        // LemmBox 
+        "🍋",
+        `<div class="logo-wrapper">
+        <img src="theme_resources/LemmBoxLogo.png" alt="LemmBox" class="logo lemon nosel" height="64px" onclick="lemonClicker(event)">
+        <img src="theme_resources/LemmBoxLogo.png" alt="" class="logo-glow lemon nosel" height="64px" onclick="lemonClicker(event)" aria-hidden="true">
+        </div>`,'<img id="Hotdog" src="theme_resources/hotdog.png" width="62.5" height="41.625" onclick="myFunction()"> <audio id="squish1" src="media/squish1.mp3" type="audio/mpeg"></audio><audio id="squish2" src="media/squish2.mp3" type="audio/mpeg"></audio><audio id="squish3" src="media/squish3.mp3" type="audio/mpeg"></audio>'
+    ];
 
-        if (Math.floor(Math.random() * 9) == 0) {
-            document.getElementById("goldboxPlant").innerHTML = "  " + plants[(Math.floor(Math.random() * plants.length))];  
-        }
+        const plant = plants[Math.floor(Math.random() * plants.length)];
 
-        const date = new Date();
-
-        // UB birthday (june 4th)
-        if ((date.getDate() == 7) && date.getMonth() == 1) {
-            document.getElementById("goldboxPlant").innerHTML = "  🍋🎂🎉 :D";  
-        }
-
-        function changeHotdogSize() {
-            var image = document.getElementById('Hotdog');
-            image.width = Math.random() * (750 - 20) + 20;
-            image.height = Math.random() * (499 - 20) + 20;
-        }
-
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|android|ipad|playbook|silk/i.test(navigator.userAgent)) {
-            document.getElementById("introduction").innerHTML = "LemmBox is an online tool for sketching and sharing chiptune melodies. Make sure that your volume is turned up, then press the play button!";
-            document.getElementById("keyboard-instructions").style.display = "none";
-            document.getElementById("mobile-instructions").style.display = "";
-            document.getElementById("bar-editing").innerHTML = "Tap the boxes to move to a different part of the song, or tap on the currently selected box to swap which pattern is played during that part of the song.";
-			//document.getElementById("offline-instructions").innerHTML = 'You can use UltraBox when your device is offline if you put a shortcut to UltraBox on your home screen. <ul><li>Chrome: find the "Add to Home Screen" option in the ⋮ menu.</li><li>Firefox: find the "Add Page Shortcut" option in the ⋮ menu.</li><li>Safari: find the "Add to Home Screen" option in the bookmark menu.</li></ul>';
-        }
-
-        function browserHasRequiredFeatures() {
-            "use strict";
-            if (window.AudioContext == undefined && window.webkitAudioContext == undefined) {
-                return false;
-            }
-
-            try {
-                eval("class T {}");
-                eval("const a = () => 0");
-                eval("for (const a of []);");
-            } catch (error) {
-                return false;
-            }
-
-            return true;
-        }
-
-        if (browserHasRequiredFeatures()) {
-            // Go ahead and load js beepbox editor interface:
-            var fileref = document.createElement("script");
-            fileref.setAttribute("type", "text/javascript");
-            fileref.setAttribute("src", "beepbox_editor.min.js");
-            document.head.appendChild(fileref);
+        // Use innerHTML for actual HTML, textContent otherwise
+        if (plant.includes("<") && plant.includes(">")) {
+            document.getElementById("goldboxPlant").innerHTML = plant;
         } else {
-            document.getElementById("beepboxEditorContainer").innerHTML = "Sorry, LemmBox doesn't support your browser. Try a recent version of Chrome, Firefox, Edge, Safari, or Opera.";
+            document.getElementById("goldboxPlant").textContent = "  " + plant;
+        }
+    
+
+    const date = new Date();
+
+    // LB birthday (Jan 7th)
+    if ((date.getDate() == 7) && date.getMonth() == 1) {
+        document.getElementById("goldboxPlant").innerHTML = "  🍋🎂🎉 :D";  
+    }
+
+    function changeHotdogSize() {
+        var image = document.getElementById('Hotdog');
+        image.width = Math.random() * (750 - 20) + 20;
+        image.height = Math.random() * (499 - 20) + 20;
+    }
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|android|ipad|playbook|silk/i.test(navigator.userAgent)) {
+        document.getElementById("introduction").innerHTML = "LemmBox is an online tool for sketching and sharing chiptune melodies. Make sure that your volume is turned up, then press the play button!";
+        document.getElementById("keyboard-instructions").style.display = "none";
+        document.getElementById("mobile-instructions").style.display = "";
+        document.getElementById("bar-editing").innerHTML = "Tap the boxes to move to a different part of the song, or tap on the currently selected box to swap which pattern is played during that part of the song.";
+        //document.getElementById("offline-instructions").innerHTML = 'You can use UltraBox when your device is offline if you put a shortcut to UltraBox on your home screen. <ul><li>Chrome: find the "Add to Home Screen" option in the ⋮ menu.</li><li>Firefox: find the "Add Page Shortcut" option in the ⋮ menu.</li><li>Safari: find the "Add to Home Screen" option in the bookmark menu.</li></ul>';
+    }
+
+    function browserHasRequiredFeatures() {
+        "use strict";
+        if (window.AudioContext == undefined && window.webkitAudioContext == undefined) {
+            return false;
         }
 
-		// If the page was loaded with an old song version that old versions of BeepBox support,
-		// update the links to the old versions so that they'll open the song.
-	    //HEY, ULTRABOX DOESN'T HAVE THESE, WHAT DO WE DO????
-		if (/^#[1-6]/.test(location.hash)) {
-			document.getElementById("linkTo2_3").href += location.hash;
-		}
-		if (/^#[1-8]/.test(location.hash)) {
-			document.getElementById("linkTo3_0").href += location.hash;
-		}
-    </script>
+        try {
+            eval("class T {}");
+            eval("const a = () => 0");
+            eval("for (const a of []);");
+        } catch (error) {
+            return false;
+        }
+
+        return true;
+    }
+
+    if (browserHasRequiredFeatures()) {
+        // Load js beepbox editor interface
+        var fileref = document.createElement("script");
+        fileref.setAttribute("type", "text/javascript");
+        fileref.setAttribute("src", "beepbox_editor.min.js");
+        document.head.appendChild(fileref);
+    } else {
+        document.getElementById("beepboxEditorContainer").innerHTML = "Sorry, LemmBox doesn't support your browser. Try a recent version of Chrome, Firefox, Edge, Safari, or Opera.";
+    }
+
+    // If the page was loaded with an old song version that old versions of BeepBox support,
+    // update the links to the old versions so that they'll open the song.
+    if (/^#[1-6]/.test(location.hash)) {
+        document.getElementById("linkTo2_3").href += location.hash;
+    }
+    if (/^#[1-8]/.test(location.hash)) {
+        document.getElementById("linkTo3_0").href += location.hash;
+    }
+</script>
+
 </body>
 </html>

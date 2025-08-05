@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
+   	<link rel="stylesheet" href="subpages.css">
+	<link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="theme-color" content="#ffe845"/>
@@ -19,147 +20,79 @@
 			});
 		}
 	</script>
-	<title>LemmBox Patch Notes</title>
-    <style type="text/css">
-
-        html {
-            background: var(--page-margin, #020009);
-            overflow-x: hidden;
-            font-size: large;
-            font-family: 'B612', sans-serif;
-            line-height: 1.3;
-            color: var(--primary-text, white);
-        }
-
-		body {
-			max-width: 1100px;
-			margin: auto;
-			padding: 1rem;
-		}
-
-        h1 {
-            font-size: 1.7rem;
-            text-align: center;
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-            -webkit-text-stroke-width: 0;
-        }
-
-		h2 {
-			border-top: 2px solid #808080;
-			padding-top: 1rem;
-			margin-top: 2rem;
-			font-size: 1.5rem;
-		}
-
-		h3 {
-            font-size: 1.2rem;
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-            -webkit-text-stroke-width: 0;
-        }
-
-        a {
-            color: var(--link-accent, #98f);
-        }
-		button {
-			margin-top: 15px;
-			padding: 10px 15px;
-			border: 0;
-			border-radius: 100px;
-			background-color: #fff570;
-			color: #020009;
-			font-weight: Bold;
-			transition: all 0.5s;
-			-webkit-transition: all 0.5s;
-		}
-
-		button:hover {
-			background-color: #fff570;
-			box-shadow: 0 0 20px #fff57050;
-			transform: scale(1.1);
-		}
-
-		button:active {
-			background-color: #e6da4c;
-			transition: all 0.25s;
-			-webkit-transition: all 0.25s;
-			box-shadow: none;
-			transform: scale(0.98);
-		}
-
-		@media (min-width: 1100px) {
-			body {
-				width: 1100px;
-			}
-			h2 {
-				width: 1100px;
-				align-items: start;
-				align-content: start;
-				border-top: #808080 solid 2px;
-				border-radius: 2px;
-				padding-top: 32px;
-			}
-		}
-		p {
-			font-size: 0.8rem;
-			color: #9C9BA3;
-		}
-		.backbuttondiv {
-			display: flex;
-			justify-content: center;
-			width: 100%;
-		}
-		.headertext{
-			color: #fff570;
-			width: 100%;
-		}
-
-
-		a {
-			color: var(--link-accent, #fff570);
-		}
-
-		a.link {
-			color: var(--secondary-text, rgb(193, 193, 193));
-			margin-left: 8px;
-		}
-
-		a.link:hover {
-			color: var(--secondary-text, rgb(233, 233, 233));
-		}
-
-		#popup {
-			position: fixed;
-			bottom: 20px;
-			left: 20px;
-			background-color: #78c25a;
-			color: white;
-			margin-top: 15px;
-			padding: 10px 15px;
-			font-weight: bold;
-			border-radius: 4px;
-			opacity: 0;
-			transform: translateX(-100%);
-			transition: all 0.5s ease;
-			pointer-events: none;
-			z-index: 1000;
-		}
-
-
-		#popup.show {
-			opacity: 1;
-			transform: translateX(0);
-			pointer-events: auto;
-		}
-
-
-	</style>
+<title>LemmBox - Patch Notes</title>
 </head>
 <body>
 
-<div class="backbuttondiv"><button class="backbutton" onclick="history.back()">Go Back</button></div>
-<h1> <span class="headertext"> Patch Notes (in reverse chronological order)</span> </h1>
+<nav class="navbar">
+  <a title="Click to go back to homepage" href="https://lemmbox.github.io">
+    <div class="logo-wrapper">
+      <img src="theme_resources/LemmBoxLogo.png" alt="LemmBox" class="logo" height="64px">
+      <img src="theme_resources/LemmBoxLogo.png" alt="" class="logo-glow" height="64px" aria-hidden="true">
+    </div>
+  </a>
+  <div class="navbartitle col"><b>Patch Notes - Reverse Chronological</b></div>
+  <div class="col">
+    <a class="navbarlinks" href="faq"><button>FAQ</button></a>
+    <a class="navbarlinks" href="lemmbox-features"><button>Features</button></a>
+    <a class="navbarlinks" onclick="history.back()"><button>Go Back</button></a>
+  </div>
+</nav>
+
+<article id="0.1.0b">
+  <h2>
+    Version 0.1.0-b | Major update
+    <a class="link" onclick="linkTo('0.1.0b')" title="Copy link">⎋</a>
+  </h2>
+  <ul>
+    <li>Visual overhaul to all subpages
+      <ul>
+        <li>Added a navbar to all subpages</li>
+        <li>This new navbar has a clickable logo that brings you back to the main page.</li>
+        <li>There are also links that can help you navigate back home and to other subpages.</li>
+        <li>A footer showing the page title, with buttons to return to the top or go back to the home page.</li>
+        <li>Fixed some CSS weirdness and cleaned up some CSS for my sake</li>
+      </ul>
+    </li>
+    <li>Changes on the main page
+      <ul>
+        <li>Moved the "Songs shared on Bluesky" section as to no longer squish the instructions.</li>
+		<li>Removed a plant "it's called LemmBox, not LemonBox... come on Mid" as I felt it came off as kinda rude.</li>
+        <li>Added two new plants and easter eggs</li>
+      </ul>
+    </li>
+    <li>Added new export options
+      <ul>
+        <li>Ability to export .ogg files</li>
+        <li>Ability to export .ogx (opus) files</li>
+        <li>Ability to export .txt files</li>
+        <li>Ability to export .png files</li>
+      </ul>
+    </li>
+<li>Copied over the song editor layouts from <a href="https://choptop84.github.io/abyssbox-app/">AbyssBox</a>
+      <ul>
+		<details>
+			<summary>Before</summary>
+			<img src="media/Before.png">
+		</details>
+				<details>
+			<summary>After</summary>
+			<img src="media/After.png">
+		</details>
+	</ul>
+    </li>  
+<li>Added a new keybind for the song editor and player
+      <ul>
+        <li><b>G</b>: Shorten song URL</li>
+      </ul>
+    </li>
+<li>Changed the color of fifth notes from <b class="fifth1">this</b> to <b class="fifth2">this</b></li>
+<li>Made the preference "Highlight "Fifth" Note" on by default</li>
+</ul>
+  <p class="date">08/04/2025</p>
+</article>
+
+
 
 <article id="0.9.9a">
 	<h2>Version 0.9.9-a | Minor update<a class="link" onclick="linkTo('0.9.9a')" title="Copy link">⎋</a></h2>
@@ -274,8 +207,8 @@
 	<p class="date">03/29/2025</p>
 </article>
 
-<article id="0.9a">
-	<h2>Version 0.9-a | Major update <a class="link" onclick="linkTo('0.9a')" title="Copy link">⎋</a></h2>
+<article id="0.9.0a">
+	<h2>Version 0.9.0-a | Major update <a class="link" onclick="linkTo('0.9.0a')" title="Copy link">⎋</a></h2>
 	<ul>
 		<li>Updated the import prompt to add a LemmBox option, it is currently just visual</li>
 		<li>When exporting to JSON, it now specifies in the file that it came from LemmBox</li>
@@ -285,8 +218,8 @@
 	<p class="date">03/29/2025</p>
 </article>
 
-<article id="0.8a">
-	<h2>Version 0.8-a | Major update <a class="link" onclick="linkTo('0.8a')" title="Copy link">⎋</a></h2>
+<article id="0.8.0a">
+	<h2>Version 0.8-a | Major update <a class="link" onclick="linkTo('0.8.0a')" title="Copy link">⎋</a></h2>
 	<ul>
 		<li>Added the LemmBox dark theme as the default theme.</li>
 		<li>Updated the theme prompt to replace UltraBox's theme with LemmBox dark</li>
@@ -295,8 +228,8 @@
 	<p class="date">03/29/2025</p>
 </article>
 
-<article id="0.7a">
-	<h2>Version 0.7-a | Updated the default preferences & minor bug fix<a class="link" onclick="linkTo('0.7a')" title="Copy link">⎋</a></h2>
+<article id="0.7.0a">
+	<h2>Version 0.7.0-a | Updated the default preferences & minor bug fix<a class="link" onclick="linkTo('0.7.0a')" title="Copy link">⎋</a></h2>
 	<ul>
 		<li>Show Piano Keys is now on by default</li>
 		<li>Always Fine Note Volume is now on by default</li>
@@ -309,8 +242,8 @@
 	<p class="date">03/28/2025</p>
 </article>
 
-<article id="0.6a">
-	<h2>Version 0.6-a | Updated the <a href="lemmbox-features.html">features</a> page<a class="link" onclick="linkTo('0.6a')" title="Copy link">⎋</a></h2>
+<article id="0.6.0a">
+	<h2>Version 0.6.0-a | Updated the <a href="lemmbox-features.html">features</a> page<a class="link" onclick="linkTo('0.6.0a')" title="Copy link">⎋</a></h2>
 	<ul>
 		<li>Added an image to show what I was talking about for a bug</li>
 		<li>Added a section that talks about bugs that I know about & need to fix</li>
@@ -319,8 +252,8 @@
 	<p class="date">01/16/2025</p>
 </article>
 
-<article id="0.5a">
-	<h2>Version 0.5-a | Bug fix and extra chipwave<a class="link" onclick="linkTo('0.5a')" title="Copy link">⎋</a></h2>
+<article id="0.5.0a">
+	<h2>Version 0.5.0-a | Bug fix and extra chipwave<a class="link" onclick="linkTo('0.5.0a')" title="Copy link">⎋</a></h2>
 	<ul>
 		<li>Fixed sine chipwave & added "trapasquare" chipwave</li>
 	</ul>
@@ -345,8 +278,8 @@
 	<p class="date">01/12/2025</p>
 </article>
 
-<article id="0.4a">
-	<h2>Version 0.4-a | minor update<a class="link" onclick="linkTo('0.4a')" title="Copy link">⎋</a></h2>
+<article id="0.4.0a">
+	<h2>Version 0.4.0-a | minor update<a class="link" onclick="linkTo('0.4.0a')" title="Copy link">⎋</a></h2>
 	<ul>
 		<li>Updated the main page to change the color of the mod title from <b style="color:#9c64f7;">LemmBox</b> to <b style="color:#eef078;">LemmBox</b></li>
 		<li>Changed the embed color from <a style="color:#CCCCCC;">#CCCCCC</a> to <a style="color:#ffe845;">#ffe845</a> and added an image when linking the site</li>
@@ -356,16 +289,16 @@
 	<p class="date">01/11/2025</p>
 </article>
 
-<article id="0.3a">
-	<h2>Version 0.3-a | minor update<a class="link" onclick="linkTo('0.3a')" title="Copy link">⎋</a></h2>
+<article id="0.3.0a">
+	<h2>Version 0.3.0-a | minor update<a class="link" onclick="linkTo('0.3.0a')" title="Copy link">⎋</a></h2>
 	<ul>
 		<li>Changed the description when linking the site</li>
 	</ul>
 	<p class="date">01/09/2025</p>
 </article>
 
-<article id="0.2a">
-	<h2>Version 0.2-a | minor update<a class="link" onclick="linkTo('0.2a')" title="Copy link">⎋</a></h2>
+<article id="0.2.0a">
+	<h2>Version 0.2.0-a | minor update<a class="link" onclick="linkTo('0.2.0a')" title="Copy link">⎋</a></h2>
 	<ul>
 		<li>Removed wackybox Hotdog from main page</li>
 		<li>Added a small chance for a 🍋 to show up next to the mod name alongside the other random messages</li>
@@ -374,8 +307,8 @@
 	<p class="date">01/08/2025</p>
 </article>
 
-<article id="0.1a">
-	<h2>Version 0.1-a | minor update<a class="link" onclick="linkTo('0.1a')" title="Copy link">⎋</a></h2>
+<article id="0.1.0a">
+	<h2>Version 0.1.0-a | minor update<a class="link" onclick="linkTo('0.1.0a')" title="Copy link">⎋</a></h2>
 	<ul>
 		<li>Copied the UltraBox source code - start of LemmBox</li>
 	</ul>
@@ -385,6 +318,15 @@
 
 <div id="popup">Link to patch note is now copied!</div>
 
-
+<div class="footer">
+<nav class="navbar">
+  <div class="col"></div>
+  <footer class="navbartitle col footertext">HappyLemonLime | LemmBox - Patch Notes </footer>
+  <div class="col">
+    <a class="footerlinks" href="https://lemmbox.github.io">Home</a>
+    <a class="footerlinks" href="#top">Back to top</a>
+  </div>
+</nav>
+</div>
 </body>
 </html>

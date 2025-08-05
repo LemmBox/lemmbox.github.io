@@ -1604,6 +1604,8 @@ var beepbox = (function (exports) {
                 { name: "crystal", midiProgram: 98, generalMidi: true, settings: { "type": "FM", "effects": "reverb", "transition": "hard fade", "chord": "harmony", "filterCutoffHz": 2828, "filterResonance": 14, "filterEnvelope": "twang 2", "vibrato": "delayed", "algorithm": "1 2 3 4", "feedbackType": "1⟲ 2⟲ 3⟲ 4⟲", "feedbackAmplitude": 4, "feedbackEnvelope": "twang 1", "operators": [{ "frequency": "1×", "amplitude": 10, "envelope": "custom" }, { "frequency": "3×", "amplitude": 7, "envelope": "custom" }, { "frequency": "6×", "amplitude": 4, "envelope": "custom" }, { "frequency": "13×", "amplitude": 4, "envelope": "custom" }] } },
                 { name: "tinkle bell", midiProgram: 112, generalMidi: true, settings: { "type": "FM", "effects": "reverb", "transition": "hard", "chord": "strum", "filterCutoffHz": 2828, "filterResonance": 14, "filterEnvelope": "twang 2", "vibrato": "none", "algorithm": "1 2 3 4", "feedbackType": "1→2→3→4", "feedbackAmplitude": 5, "feedbackEnvelope": "twang 3", "operators": [{ "frequency": "~2×", "amplitude": 7, "envelope": "custom" }, { "frequency": "5×", "amplitude": 7, "envelope": "custom" }, { "frequency": "7×", "amplitude": 7, "envelope": "custom" }, { "frequency": "16×", "amplitude": 7, "envelope": "custom" }] } },
                 { name: "agogo", midiProgram: 113, generalMidi: true, settings: { "type": "FM", "effects": "reverb", "transition": "hard fade", "chord": "strum", "filterCutoffHz": 4000, "filterResonance": 14, "filterEnvelope": "decay 1", "vibrato": "none", "algorithm": "1 2 3 4", "feedbackType": "1→4", "feedbackAmplitude": 15, "feedbackEnvelope": "decay 1", "operators": [{ "frequency": "2×", "amplitude": 9, "envelope": "custom" }, { "frequency": "5×", "amplitude": 6, "envelope": "custom" }, { "frequency": "8×", "amplitude": 9, "envelope": "custom" }, { "frequency": "13×", "amplitude": 11, "envelope": "custom" }] } },
+                { name: "summoning bell", generalMidi: false, settings: { "type": "Picked String", "volume": -15, "eqFilter": [], "eqFilterType": false, "eqSimpleCut": 10, "eqSimplePeak": 0, "envelopeSpeed": 12, "eqSubFilters0": [], "effects": ["panning", "chord type", "detune", "vibrato", "chorus", "reverb"], "chord": "strum", "fastTwoNoteArp": false, "arpeggioSpeed": 12, "strumParts": 1, "detuneCents": -40, "vibrato": "delayed", "vibratoDepth": 0.3, "vibratoDelay": 18.5, "vibratoSpeed": 10, "vibratoType": 0, "pan": 0, "panDelay": 10, "chorus": 29, "reverb": 100, "fadeInSeconds": 0, "fadeOutTicks": 96, "harmonics": [100, 0, 0, 100, 0, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "unison": "none", "stringSustain": 71, "envelopes": [], "isDrum": false } },
+                { name: "crystal bell", generalMidi: false, settings: { "type": "Picked String", "volume": -15, "eqFilter": [], "eqFilterType": false, "eqSimpleCut": 10, "eqSimplePeak": 0, "envelopeSpeed": 12, "eqSubFilters0": [], "effects": ["panning", "chord type", "vibrato", "chorus", "reverb"], "chord": "strum", "fastTwoNoteArp": false, "arpeggioSpeed": 12, "strumParts": 1, "vibrato": "delayed", "vibratoDepth": 0.3, "vibratoDelay": 18.5, "vibratoSpeed": 10, "vibratoType": 0, "pan": 0, "panDelay": 10, "chorus": 29, "reverb": 100, "fadeInSeconds": 0, "fadeOutTicks": 96, "harmonics": [100, 0, 0, 100, 0, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "unison": "none", "stringSustain": 71, "envelopes": [], "isDrum": false } },
             ])
         },
         {
@@ -1833,7 +1835,6 @@ var beepbox = (function (exports) {
                 { name: "crystal bell", generalMidi: false, settings: { "type": "Picked String", "volume": -15, "eqFilter": [], "eqFilterType": false, "eqSimpleCut": 10, "eqSimplePeak": 0, "envelopeSpeed": 12, "eqSubFilters0": [], "effects": ["panning", "chord type", "vibrato", "chorus", "reverb"], "chord": "strum", "fastTwoNoteArp": false, "arpeggioSpeed": 12, "strumParts": 1, "vibrato": "delayed", "vibratoDepth": 0.3, "vibratoDelay": 18.5, "vibratoSpeed": 10, "vibratoType": 0, "pan": 0, "panDelay": 10, "chorus": 29, "reverb": 100, "fadeInSeconds": 0, "fadeOutTicks": 96, "harmonics": [100, 0, 0, 100, 0, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "unison": "none", "stringSustain": 71, "envelopes": [], "isDrum": false } },
                 { name: "otherworldly steelpan", generalMidi: false, settings: { "type": "FM6op", "volume": 0, "eqFilter": [{ "type": "low-pass", "cutoffHz": 125, "linearGain": 2 }], "eqFilterType": false, "eqSimpleCut": 10, "eqSimplePeak": 0, "envelopeSpeed": 12, "discreteEnvelope": false, "eqSubFilters0": [{ "type": "low-pass", "cutoffHz": 125, "linearGain": 2 }], "effects": ["panning", "vibrato", "note filter", "distortion", "chorus", "echo", "reverb"], "vibrato": "custom", "vibratoDepth": 0.28, "vibratoDelay": 19, "vibratoSpeed": 2, "vibratoType": 0, "noteFilterType": false, "noteSimpleCut": 10, "noteSimplePeak": 0, "noteFilter": [{ "type": "low-pass", "cutoffHz": 840.9, "linearGain": 1 }, { "type": "high-pass", "cutoffHz": 420.45, "linearGain": 1.4142 }], "noteSubFilters0": [{ "type": "low-pass", "cutoffHz": 840.9, "linearGain": 1 }, { "type": "high-pass", "cutoffHz": 420.45, "linearGain": 1.4142 }], "distortion": 0, "aliases": false, "pan": 0, "panDelay": 0, "chorus": 14, "echoSustain": 57, "echoDelayBeats": 1.5, "reverb": 58, "fadeInSeconds": 0.0263, "fadeOutTicks": -6, "algorithm": "1 2 3 (4 5)←6", "feedbackType": "3→4", "feedbackAmplitude": 0, "operators": [{ "frequency": "0.5×", "amplitude": 6, "waveform": "trapezoid", "pulseWidth": 5 }, { "frequency": "1×", "amplitude": 7, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "0.5×", "amplitude": 10, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "0.12×", "amplitude": 7, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "0.25×", "amplitude": 6, "waveform": "trapezoid", "pulseWidth": 5 }, { "frequency": "16×", "amplitude": 0, "waveform": "sine", "pulseWidth": 5 }], "envelopes": [{ "target": "operatorAmplitude", "envelope": "punch", "index": 5 }, { "target": "noteVolume", "envelope": "punch" }], "isDrum": false } },
                 { name: "calm light", generalMidi: false, settings: { "type": "FM", "volume": 0, "eqFilter": [{ "type": "low-pass", "cutoffHz": 19027.31, "linearGain": 0.7071 }], "eqFilterType": true, "eqSimpleCut": 10, "eqSimplePeak": 0, "envelopeSpeed": 12, "eqSubFilters1": [], "effects": ["panning", "vibrato", "reverb"], "vibrato": "custom", "vibratoDepth": 0.32, "vibratoDelay": 19, "vibratoSpeed": 3, "vibratoType": 0, "pan": 0, "panDelay": 10, "reverb": 58, "fadeInSeconds": 0.1575, "fadeOutTicks": 24, "algorithm": "1←(2 3 4)", "feedbackType": "1⟲", "feedbackAmplitude": 0, "operators": [{ "frequency": "1×", "amplitude": 10, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "1×", "amplitude": 4, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "1×", "amplitude": 7, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "1×", "amplitude": 3, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "1×", "amplitude": 0, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "1×", "amplitude": 0, "waveform": "sine", "pulseWidth": 5 }], "envelopes": [{ "target": "noteVolume", "envelope": "swell 1" }], "isDrum": false } },
-                { name: "Nebula Veil", generalMidi: false, settings: { "type": "FM6op", "volume": -12, "eqFilter": [{ "type": "low-pass", "cutoffHz": 9500, "linearGain": 1.0 }, { "type": "high-shelf", "cutoffHz": 16000, "linearGain": 0.8 }], "eqFilterType": false, "eqSimpleCut": 10, "eqSimplePeak": 0, "envelopeSpeed": 10, "discreteEnvelope": false, "eqSubFilters0": [], "effects": ["panning", "vibrato", "reverb", "chorus"], "transition": "slide", "clicklessTransition": true, "vibrato": "custom", "vibratoDepth": 0.15, "vibratoDelay": 12, "vibratoSpeed": 3, "vibratoType": 0, "pan": 0, "panDelay": 6, "reverb": 85, "chorus": 22, "fadeInSeconds": 0.08, "fadeOutTicks": 32, "algorithm": "1←2←(3 4)←(5 6)", "feedbackType": "2⟲", "feedbackAmplitude": 0.2, "operators": [{ "frequency": "1×", "amplitude": 12, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "1×", "amplitude": 8, "waveform": "triangle", "pulseWidth": 5 }, { "frequency": "2×", "amplitude": 4, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "0.5×", "amplitude": 6, "waveform": "triangle", "pulseWidth": 5 }, { "frequency": "3×", "amplitude": 2, "waveform": "sine", "pulseWidth": 5 }, { "frequency": "0.25×", "amplitude": 3, "waveform": "sine", "pulseWidth": 5 }], "envelopes": [{ "target": "noteVolume", "envelope": "swell 2" }, { "target": "operatorAmplitude", "envelope": "twang 1", "index": 3 }], "isDrum": false } },
                 { name: "mellow triangle", generalMidi: false, settings: { "type": "custom chip", "volume": -5, "eqFilter": [{ "type": "high-pass", "cutoffHz": 250, "linearGain": 0.5 }], "eqFilterType": false, "eqSimpleCut": 10, "eqSimplePeak": 0, "envelopeSpeed": 12, "eqSubFilters0": [{ "type": "high-pass", "cutoffHz": 250, "linearGain": 0.5 }], "effects": ["panning", "chord type", "detune", "vibrato", "chorus", "echo", "reverb"], "chord": "simultaneous", "fastTwoNoteArp": false, "arpeggioSpeed": 12, "detuneCents": -40, "vibrato": "custom", "vibratoDepth": 0.28, "vibratoDelay": 6, "vibratoSpeed": 10, "vibratoType": 0, "pan": 0, "panDelay": 10, "chorus": 29, "echoSustain": 29, "echoDelayBeats": 0.25, "reverb": 19, "fadeInSeconds": 0, "fadeOutTicks": 12, "unison": "none", "wave": "square", "customChipWave": { "0": -1, "1": -1, "2": -4, "3": -4, "4": -8, "5": -8, "6": -11, "7": -11, "8": -14, "9": -14, "10": -17, "11": -17, "12": -20, "13": -20, "14": -24, "15": -24, "16": -23, "17": -23, "18": -20, "19": -20, "20": -17, "21": -17, "22": -14, "23": -14, "24": -11, "25": -11, "26": -7, "27": -7, "28": -4, "29": -4, "30": -1, "31": -1, "32": 2, "33": 2, "34": 5, "35": 5, "36": 8, "37": 8, "38": 12, "39": 12, "40": 15, "41": 15, "42": 18, "43": 18, "44": 21, "45": 21, "46": 24, "47": 24, "48": 24, "49": 24, "50": 21, "51": 21, "52": 18, "53": 18, "54": 15, "55": 15, "56": 12, "57": 12, "58": 8, "59": 8, "60": 5, "61": 5, "62": 2, "63": 2 }, "customChipWaveIntegral": { "0": 0, "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0, "10": 0, "11": 0, "12": 0, "13": 0, "14": 0, "15": 0, "16": 0, "17": 0, "18": 0, "19": 0, "20": 0, "21": 0, "22": 0, "23": 0, "24": 0, "25": 0, "26": 0, "27": 0, "28": 0, "29": 0, "30": 0, "31": 0, "32": 0, "33": 0, "34": 0, "35": 0, "36": 0, "37": 0, "38": 0, "39": 0, "40": 0, "41": 0, "42": 0, "43": 0, "44": 0, "45": 0, "46": 0, "47": 0, "48": 0, "49": 0, "50": 0, "51": 0, "52": 0, "53": 0, "54": 0, "55": 0, "56": 0, "57": 0, "58": 0, "59": 0, "60": 0, "61": 0, "62": 0, "63": 0, "64": 0 }, "envelopes": [], "isDrum": false } },
             ]) },
     ]);
@@ -7070,7 +7071,7 @@ var beepbox = (function (exports) {
     --ui-widget-focus: #2d293b;
     --pitch-background: #44444A;
     --tonic: #c2a855;
-    --fifth-note: #468;
+    --fifth-note: #6e9166;
     --third-note: #486;
     --white-piano-key: #bbb;
     --black-piano-key: #444;
@@ -8112,6 +8113,7 @@ var beepbox = (function (exports) {
     ColorConfig.textSelection = "var(--text-selection, rgba(119,68,255,0.99))";
     ColorConfig.boxSelectionFill = "var(--box-selection-fill, rgba(255,255,255,0.2))";
     ColorConfig.loopAccent = "var(--loop-accent, #74f)";
+    ColorConfig.sampleFailed = "var(--sample-failed, #f00)";
     ColorConfig.linkAccent = "var(--link-accent, #98f)";
     ColorConfig.uiWidgetBackground = "var(--ui-widget-background, #444)";
     ColorConfig.uiWidgetFocus = "var(--ui-widget-focus, #777)";
@@ -8214,6 +8216,8 @@ var beepbox = (function (exports) {
     ColorConfig.modLabelPrimaryText = "var(--mod-label-primary-text, black)";
     ColorConfig.disabledNotePrimary = "var(--disabled-note-primary, #999)";
     ColorConfig.disabledNoteSecondary = "var(--disabled-note-secondary, #666)";
+    ColorConfig.scrollbarColor = "var(--scrollbar-color)";
+    ColorConfig.scrollbarBackground = "var(--scrollbar-background)";
     ColorConfig.c_pitchSecondaryChannelHue = 0;
     ColorConfig.c_pitchSecondaryChannelHueScale = 0;
     ColorConfig.c_pitchSecondaryChannelSat = 0;
@@ -29756,20 +29760,23 @@ li.select2-results__option[role=group] > strong:hover {
         constructor(_doc) {
             this._doc = _doc;
             this.outputStarted = false;
-            this._fileName = input$c({ type: "text", style: "width: 10em;", value: Config.jsonFormat + "-Song", maxlength: 250, "autofocus": "autofocus" });
+            this._fileName = input$c({ type: "text", style: "width: 10em;", value: "BeepBox-Song", maxlength: 250, "autofocus": "autofocus" });
             this._computedSamplesLabel = div$h({ style: "width: 10em;" }, new Text("0:00"));
             this._enableIntro = input$c({ type: "checkbox" });
-            this._loopDropDown = input$c({ style: "width: 2em;", type: "number", min: "1", max: "4", step: "1" });
+            this._loopDropDown = input$c({ style: "width: 3em;", type: "number", min: "1", max: "16", step: "1" });
             this._enableOutro = input$c({ type: "checkbox" });
-            this._formatSelect = select$b({ style: "width: 100%;" }, option$b({ value: "wav" }, "Export to .wav file."), option$b({ value: "mp3" }, "Export to .mp3 file."), option$b({ value: "midi" }, "Export to .mid file."), option$b({ value: "json" }, "Export to .json file."), option$b({ value: "html" }, "Export to .html file."));
+            this._formatSelect = select$b({ style: "width: 100%;" }, option$b({ value: "wav" }, "Export to .wav file."), option$b({ value: "mp3" }, "Export to .mp3 file."), option$b({ value: "ogg" }, "Export to .ogg file."), option$b({ value: "opus" }, "Export to .opus file."), option$b({ value: "midi" }, "Export to .mid file."), option$b({ value: "json" }, "Export to .json file."), option$b({ value: "html" }, "Export to .html file."), option$b({ value: "txt" }, "Export to .txt file."), option$b({ value: "png" }, "Export to .png file."));
             this._removeWhitespace = input$c({ type: "checkbox" });
             this._removeWhitespaceDiv = div$h({ style: "vertical-align: middle; align-items: center; justify-content: space-between; margin-bottom: 14px;" }, "Remove Whitespace: ", this._removeWhitespace);
+            this._oggWarning = div$h({ style: "vertical-align: middle; align-items: center; justify-content: space-between; margin-bottom: 14px;" }, "Warning: .ogg files aren't supported on as many devices as mp3 or wav. So Playback might not be possible on specific devices.");
+            this._opusWarning = div$h({ style: "vertical-align: middle; align-items: center; justify-content: space-between; margin-bottom: 14px;" }, "Warning: .opus files aren't supported on as many devices as mp3 or wav. So Playback might not be possible on specific devices.");
             this._cancelButton = button$h({ class: "cancelButton" });
             this._exportButton = button$h({ class: "exportButton", style: "width:45%;" }, "Export");
             this._outputProgressBar = div$h({ style: `width: 0%; background: ${ColorConfig.loopAccent}; height: 100%; position: absolute; z-index: 2;` });
             this._outputProgressLabel = div$h({ style: `position: relative; top: -1px; z-index: 3;` }, "0%");
-            this._outputProgressContainer = div$h({ style: `height: 12px; background: ${ColorConfig.uiWidgetBackground}; display: block; position: relative; z-index: 1;` }, this._outputProgressBar, this._outputProgressLabel);
-            this.container = div$h({ class: "prompt noSelection", style: "width: 200px;" }, h2$g("Export Options"), div$h({ style: "display: flex; flex-direction: row; align-items: center; justify-content: space-between;" }, "File name:", this._fileName), div$h({ style: "display: flex; flex-direction: row; align-items: center; justify-content: space-between;" }, "Length:", this._computedSamplesLabel), div$h({ style: "display: table; width: 100%;" }, div$h({ style: "display: table-row;" }, div$h({ style: "display: table-cell;" }, "Intro:"), div$h({ style: "display: table-cell;" }, "Loop Count:"), div$h({ style: "display: table-cell;" }, "Outro:")), div$h({ style: "display: table-row;" }, div$h({ style: "display: table-cell; vertical-align: middle;" }, this._enableIntro), div$h({ style: "display: table-cell; vertical-align: middle;" }, this._loopDropDown), div$h({ style: "display: table-cell; vertical-align: middle;" }, this._enableOutro))), div$h({ class: "selectContainer", style: "width: 100%;" }, this._formatSelect), this._removeWhitespaceDiv, div$h({ style: "text-align: left;" }, "Exporting can be slow. Reloading the page or clicking the X will cancel it. Please be patient."), this._outputProgressContainer, div$h({ style: "display: flex; flex-direction: row-reverse; justify-content: space-between;" }, this._exportButton), this._cancelButton);
+            this._outputProgressContainer = div$h({ style: `height: 12px; background: ${ColorConfig.uiWidgetBackground}; display: block; position: relative; z-index: 1; margin-bottom: 14px;` }, this._outputProgressBar, this._outputProgressLabel);
+            this._exportPrompt = div$h({}, div$h({ class: "promptTitle", style: "margin-bottom: 14px;" }, h2$g({ class: "exportExt", style: "text-align: inherit;" }, ""), h2$g({ class: "exportTitle" }, "Export Options")), div$h({ style: "display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin-bottom: 14px;" }, "File name:", this._fileName), div$h({ style: "display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin-bottom: 14px;" }, "Length:", this._computedSamplesLabel), div$h({ style: "display: table; width: 100%; margin-bottom: 14px;" }, div$h({ style: "display: table-row;" }, div$h({ style: "display: table-cell;" }, "Intro:"), div$h({ style: "display: table-cell;" }, "Loop Count:"), div$h({ style: "display: table-cell;" }, "Outro:")), div$h({ style: "display: table-row; margin-bottom: 14px;" }, div$h({ style: "display: table-cell; vertical-align: middle;" }, this._enableIntro), div$h({ style: "display: table-cell; vertical-align: middle;" }, this._loopDropDown), div$h({ style: "display: table-cell; vertical-align: middle;" }, this._enableOutro))), this._removeWhitespaceDiv, this._oggWarning, div$h({ class: "selectContainer", style: "width: 100%; margin-bottom: 14px;" }, this._formatSelect), div$h({ style: "text-align: left; margin-bottom: 14px;" }, "Exporting can be slow. Reloading the page or clicking the X will cancel it. Please be patient."), this._outputProgressContainer, div$h({ style: "display: flex; flex-direction: row-reverse; justify-content: space-between; margin-bottom: 14px;" }, this._exportButton), this._cancelButton);
+            this.container = div$h({ class: "prompt noSelection", style: "width: 200px;" }, this._exportPrompt);
             this._close = () => {
                 if (this.synth != null)
                     this.synth.renderingSong = false;
@@ -29793,6 +29800,7 @@ li.select2-results__option[role=group] > strong:hover {
                     return;
                 window.localStorage.setItem("exportFormat", this._formatSelect.value);
                 window.localStorage.setItem("exportWhitespace", this._removeWhitespace.value);
+                window.localStorage.setItem("exportFormat", this._formatSelect.value);
                 switch (this._formatSelect.value) {
                     case "wav":
                         this.outputStarted = true;
@@ -29801,6 +29809,14 @@ li.select2-results__option[role=group] > strong:hover {
                     case "mp3":
                         this.outputStarted = true;
                         this._exportTo("mp3");
+                        break;
+                    case "ogg":
+                        this.outputStarted = true;
+                        this._exportTo("ogg");
+                        break;
+                    case "opus":
+                        this.outputStarted = true;
+                        this._exportTo("opus");
                         break;
                     case "midi":
                         this.outputStarted = true;
@@ -29812,6 +29828,14 @@ li.select2-results__option[role=group] > strong:hover {
                         break;
                     case "html":
                         this._exportToHtml();
+                        break;
+                    case "txt":
+                        this.outputStarted = true;
+                        this._exportTo("txt");
+                        break;
+                    case "png":
+                        this.outputStarted = true;
+                        this._exportTo("png");
                         break;
                     default:
                         throw new Error("Unhandled file export type.");
@@ -29838,7 +29862,7 @@ li.select2-results__option[role=group] > strong:hover {
             if (lastExportFormat != null) {
                 this._formatSelect.value = lastExportFormat;
             }
-            const lastExportWhitespace = window.localStorage.getItem("exportWhitespace") != "false";
+            const lastExportWhitespace = window.localStorage.getItem("exportWhitespace") == "true";
             if (lastExportWhitespace != null) {
                 this._removeWhitespace.checked = lastExportWhitespace;
             }
@@ -29847,6 +29871,18 @@ li.select2-results__option[role=group] > strong:hover {
             }
             else {
                 this._removeWhitespaceDiv.style.display = "none";
+            }
+            if (this._formatSelect.value == "ogg") {
+                this._oggWarning.style.display = "block";
+            }
+            else {
+                this._oggWarning.style.display = "none";
+            }
+            if (this._formatSelect.value == "opus") {
+                this._oggWarning.style.display = "block";
+            }
+            else {
+                this._oggWarning.style.display = "none";
             }
             this._fileName.select();
             setTimeout(() => this._fileName.focus());
@@ -29863,6 +29899,20 @@ li.select2-results__option[role=group] > strong:hover {
             else {
                 this._removeWhitespaceDiv.style.display = "none";
             } });
+            this._formatSelect.addEventListener("change", () => {
+                if (this._formatSelect.value == "ogg") {
+                    this._oggWarning.style.display = "block";
+                }
+                else {
+                    this._oggWarning.style.display = "none";
+                }
+                if (this._formatSelect.value == "opus") {
+                    this._opusWarning.style.display = "block";
+                }
+                else {
+                    this._opusWarning.style.display = "none";
+                }
+            });
             this.container.addEventListener("keydown", this._whenKeyPressed);
             this._fileName.value = _doc.song.title;
             ExportPrompt._validateFileName(null, this._fileName);
@@ -29904,9 +29954,8 @@ li.select2-results__option[role=group] > strong:hover {
             if (this.outputStarted == false) {
                 return;
             }
-            const samplesPerChunk = this.synth.samplesPerSecond * 5;
-            const currentFrame = this.currentChunk * samplesPerChunk;
-            const samplesInChunk = Math.min(samplesPerChunk, this.sampleFrames - currentFrame);
+            const currentFrame = this.currentChunk * this.samplesPerChunk;
+            const samplesInChunk = Math.min(this.samplesPerChunk, this.sampleFrames - currentFrame);
             const tempSamplesL = new Float32Array(samplesInChunk);
             const tempSamplesR = new Float32Array(samplesInChunk);
             this.synth.renderingSong = true;
@@ -29924,6 +29973,18 @@ li.select2-results__option[role=group] > strong:hover {
                 }
                 else if (this.thenExportTo == "mp3") {
                     this._exportToMp3Finish();
+                }
+                else if (this.thenExportTo == "ogg") {
+                    this._exportToOggFinish();
+                }
+                else if (this.thenExportTo == "txt") {
+                    this._exportToTxtFinish();
+                }
+                else if (this.thenExportTo == "png") {
+                    this._exportToPngFinish();
+                }
+                else if (this.thenExportTo == "opus") {
+                    this._exportToOpusFinish();
                 }
                 else {
                     throw new Error("Unrecognized file export type chosen!");
@@ -29943,6 +30004,18 @@ li.select2-results__option[role=group] > strong:hover {
             else if (type == "mp3") {
                 this.synth.samplesPerSecond = 44100;
             }
+            else if (type == "ogg") {
+                this.synth.samplesPerSecond = 48000;
+            }
+            else if (type == "opus") {
+                this.synth.samplesPerSecond = 48000;
+            }
+            else if (type == "txt") {
+                this.synth.samplesPerSecond = 48000;
+            }
+            else if (type == "png") {
+                this.synth.samplesPerSecond = 48000;
+            }
             else {
                 throw new Error("Unrecognized file export type chosen!");
             }
@@ -29958,7 +30031,8 @@ li.select2-results__option[role=group] > strong:hover {
             this.synth.computeLatestModValues();
             this.synth.warmUpSynthesizer(this._doc.song);
             this.sampleFrames = this.synth.getTotalSamples(this._enableIntro.checked, this._enableOutro.checked, this.synth.loopRepeatCount);
-            this.totalChunks = Math.ceil(this.sampleFrames / (this.synth.samplesPerSecond * 5));
+            this.samplesPerChunk = this.synth.samplesPerSecond * 5;
+            this.totalChunks = Math.ceil(this.sampleFrames / this.samplesPerChunk);
             this.recordedSamplesL = new Float32Array(this.sampleFrames);
             this.recordedSamplesR = new Float32Array(this.sampleFrames);
             setTimeout(() => { this._synthesize(); });
@@ -30054,6 +30128,220 @@ li.select2-results__option[role=group] > strong:hover {
                 script.src = "https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js";
                 script.onload = whenEncoderIsAvailable;
                 document.head.appendChild(script);
+            }
+        }
+        _exportToTxtFinish() {
+            const whenEncoderIsAvailable = () => {
+                const allSamples = [this.recordedSamplesL, this.recordedSamplesR];
+                const content = allSamples.map(String).join(", ");
+                const blob = new Blob([content], { type: "text/plain" });
+                save(blob, this._fileName.value.trim() + ".txt");
+                this._close();
+            };
+            whenEncoderIsAvailable();
+        }
+        _exportToPngFinish() {
+            const whenEncoderIsAvailable = () => {
+                const samplesL = this.recordedSamplesL;
+                const samplesR = this.recordedSamplesR;
+                const length = Math.min(samplesL.length, samplesR.length);
+                const width = 1024;
+                const height = Math.ceil(length / width);
+                const canvas = document.createElement("canvas");
+                canvas.width = width;
+                canvas.height = height;
+                const ctx = canvas.getContext("2d");
+                if (!ctx) {
+                    return;
+                }
+                const imageData = ctx.createImageData(width, height);
+                const data = imageData.data;
+                const amplify = (x, factor = 1.5) => {
+                    return Math.min(1, Math.pow(x, 1 / factor));
+                };
+                for (let i = 0; i < length; i++) {
+                    const left = samplesL[i];
+                    const right = samplesR[i];
+                    const loudness = (Math.abs(left) + Math.abs(right)) / 2;
+                    const diff = Math.abs(left - right) / 2;
+                    let pitch = 0;
+                    if (i < length - 1) {
+                        const avg = (left + right) / 2;
+                        const nextAvg = (samplesL[i + 1] + samplesR[i + 1]) / 2;
+                        pitch = Math.abs(nextAvg - avg) / 2;
+                    }
+                    const r = Math.floor(amplify(loudness) * 255);
+                    const g = Math.floor(amplify(pitch) * 255);
+                    const b = Math.floor(amplify(diff) * 255);
+                    const idx = i * 4;
+                    data[idx] = r;
+                    data[idx + 1] = g;
+                    data[idx + 2] = b;
+                    data[idx + 3] = 255;
+                }
+                ctx.putImageData(imageData, 0, 0);
+                canvas.toBlob((blob) => {
+                    if (blob) {
+                        save(blob, this._fileName.value.trim() + ".png");
+                    }
+                    else {
+                        console.error("Failed to export to PNG :(");
+                    }
+                    this._close();
+                }, "image/png");
+            };
+            whenEncoderIsAvailable();
+        }
+        _exportToOggFinish() {
+            const scripts = [
+                "https://unpkg.com/wasm-media-encoders/dist/umd/WasmMediaEncoder.min.js",
+            ];
+            let scriptsLoaded = 0;
+            const scriptsToLoad = scripts.length;
+            const whenEncoderIsAvailable = () => {
+                scriptsLoaded++;
+                if (scriptsLoaded < scriptsToLoad)
+                    return;
+                const WasmMediaEncoder = window["WasmMediaEncoder"];
+                const channelCount = 2;
+                const quality = 10;
+                const sampleBlockSize = 4096;
+                WasmMediaEncoder.createOggEncoder().then((oggEncoder) => {
+                    oggEncoder.configure({
+                        channels: channelCount,
+                        sampleRate: this.synth.samplesPerSecond,
+                        vbrQuality: quality,
+                    });
+                    const left = this.recordedSamplesL;
+                    const right = this.recordedSamplesR;
+                    const parts = [];
+                    let sampleIndex = 0;
+                    for (; sampleIndex < left.length; sampleIndex += sampleBlockSize) {
+                        const leftChunk = left.subarray(sampleIndex, sampleIndex + sampleBlockSize);
+                        const rightChunk = right.subarray(sampleIndex, sampleIndex + sampleBlockSize);
+                        const frame = ([leftChunk, rightChunk]) ;
+                        parts.push(oggEncoder.encode(frame).slice());
+                    }
+                    parts.push(oggEncoder.finalize().slice());
+                    const blob = new Blob(parts, { type: "audio/ogg" });
+                    save(blob, this._fileName.value.trim() + ".ogg");
+                    this._close();
+                });
+            };
+            if ("WasmMediaEncoder" in window) {
+                scriptsLoaded = scripts.length;
+                whenEncoderIsAvailable();
+            }
+            else {
+                scriptsLoaded = 0;
+                for (const src of scripts) {
+                    const script = document.createElement("script");
+                    script.src = src;
+                    script.onload = whenEncoderIsAvailable;
+                    document.head.appendChild(script);
+                }
+            }
+        }
+        _exportToOpusFinish() {
+            const scripts = [
+                "https://cdn.jsdelivr.net/gh/mmig/opus-encdec@e33ca40b92ddff8c168c7f5aca34b626c9acc08a/dist/libopus-encoder.js",
+                "https://cdn.jsdelivr.net/gh/mmig/opus-encdec@e33ca40b92ddff8c168c7f5aca34b626c9acc08a/src/oggOpusEncoder.js"
+            ];
+            let scriptsLoaded = 0;
+            const scriptsToLoad = scripts.length;
+            const whenEncoderIsAvailable = () => {
+                scriptsLoaded++;
+                if (scriptsLoaded < scriptsToLoad)
+                    return;
+                const OggOpusEncoder = window["OggOpusEncoder"];
+                const OpusEncoderLib = window["OpusEncoderLib"];
+                OggOpusEncoder.prototype.getOpusControl = function (control) {
+                    let result = null;
+                    const doNotMangle = Math.random() > 2 ? "" : "";
+                    const location = this["_" + doNotMangle + "malloc"](4);
+                    const outputLocation = this["_" + doNotMangle + "malloc"](4);
+                    this.HEAP32[location >> 2] = outputLocation;
+                    const returnCode = this["_" + doNotMangle + "opus_encoder_ctl"](this.encoder, control, location);
+                    if (returnCode === 0) {
+                        result = this.HEAP32[outputLocation >> 2];
+                    }
+                    this["_" + doNotMangle + "free"](outputLocation);
+                    this["_" + doNotMangle + "free"](location);
+                    return result;
+                };
+                OggOpusEncoder.prototype.getLookahead = function () {
+                    var _a;
+                    return (_a = this.getOpusControl(4027)) !== null && _a !== void 0 ? _a : 0;
+                };
+                OggOpusEncoder.prototype.setBitrate = function (value) {
+                    this.setOpusControl(4002, value);
+                };
+                OggOpusEncoder.prototype.generateIdPage2 = function (lookahead) {
+                    const segmentDataView = new DataView(this.segmentData.buffer);
+                    segmentDataView.setUint32(0, 1937076303, true);
+                    segmentDataView.setUint32(4, 1684104520, true);
+                    segmentDataView.setUint8(8, 1);
+                    segmentDataView.setUint8(9, this.config.numberOfChannels);
+                    segmentDataView.setUint16(10, lookahead, true);
+                    segmentDataView.setUint32(12, this.config.originalSampleRateOverride || this.config.originalSampleRate, true);
+                    segmentDataView.setUint16(16, 0, true);
+                    segmentDataView.setUint8(18, 0);
+                    this.segmentTableIndex = 1;
+                    this.segmentDataIndex = this.segmentTable[0] = 19;
+                    this.headerType = 2;
+                    return this.generatePage();
+                };
+                const channelCount = 2;
+                const frameSizeInMilliseconds = 20;
+                const frameSizeInSeconds = frameSizeInMilliseconds / 1000;
+                const sampleBlockSize = Math.floor(this.synth.samplesPerSecond * frameSizeInSeconds);
+                const oggEncoder = new OggOpusEncoder({
+                    numberOfChannels: channelCount,
+                    originalSampleRate: this.synth.samplesPerSecond,
+                    encoderSampleRate: this.synth.samplesPerSecond,
+                    bufferLength: sampleBlockSize,
+                    encoderApplication: 2049,
+                    encoderComplexity: 10,
+                    resampleQuality: 3,
+                }, OpusEncoderLib);
+                const parts = [];
+                const left = this.recordedSamplesL;
+                const right = this.recordedSamplesR;
+                oggEncoder.setBitrate(256000);
+                parts.push(oggEncoder.generateIdPage2(oggEncoder.getLookahead()).page);
+                parts.push(oggEncoder.generateCommentPage().page);
+                let sampleIndex = 0;
+                for (; sampleIndex < left.length; sampleIndex += sampleBlockSize) {
+                    const leftChunk = left.subarray(sampleIndex, sampleIndex + sampleBlockSize);
+                    const rightChunk = right.subarray(sampleIndex, sampleIndex + sampleBlockSize);
+                    const frame = ([leftChunk, rightChunk]) ;
+                    oggEncoder.encode(frame).forEach((page) => parts.push(page.page));
+                }
+                {
+                    const paddingSize = sampleIndex - left.length;
+                    const leftChunk = new Float32Array(paddingSize);
+                    const rightChunk = new Float32Array(paddingSize);
+                    const frame = ([leftChunk, rightChunk]) ;
+                    oggEncoder.encode(frame).forEach((page) => parts.push(page.page));
+                }
+                oggEncoder.encodeFinalFrame().forEach((page) => parts.push(page.page));
+                oggEncoder.destroy();
+                const blob = new Blob(parts, { type: "audio/opus" });
+                save(blob, this._fileName.value.trim() + ".opus");
+                this._close();
+            };
+            if (("OggOpusEncoder" in window) && ("OpusEncoderLib" in window)) {
+                scriptsLoaded = scripts.length;
+                whenEncoderIsAvailable();
+            }
+            else {
+                scriptsLoaded = 0;
+                for (const src of scripts) {
+                    const script = document.createElement("script");
+                    script.src = src;
+                    script.onload = whenEncoderIsAvailable;
+                    document.head.appendChild(script);
+                }
             }
         }
         _exportToMidi() {
@@ -30499,7 +30787,7 @@ You should be redirected to the song at:<br /><br />
 				#beepboxEditorContainer {
 					max-width: initial;
 					height: 100vh;
-					padding-top: 0px;
+					padding-top: 0px !important;
 				}
 				.beepboxEditor {
 					width: 100%;
@@ -30553,6 +30841,9 @@ You should be redirected to the song at:<br /><br />
 				.beepboxEditor.selectRow {
 					height: 2em;
 				}
+				.beepboxEditor .operatorRow {
+					heiht: 2em;
+				}
 				.beepboxEditor .trackAndMuteContainer {
 					max-height: 446px;
 				}
@@ -30585,7 +30876,7 @@ You should be redirected to the song at:<br /><br />
 				#beepboxEditorContainer {
 					max-width: initial;
 					height: 100vh;
-					padding-top: 0px;
+					padding-top: 0px !important;
 				}
 				.beepboxEditor {
 					width: 100%;
@@ -30682,7 +30973,7 @@ You should be redirected to the song at:<br /><br />
 				#beepboxEditorContainer {
 					max-width: initial;
 					height: 100vh;
-					padding-top: 0px;
+					padding-top: 0px !important;
 				}
 				.beepboxEditor {
 					width: 100%;
@@ -30758,14 +31049,14 @@ You should be redirected to the song at:<br /><br />
 				}
 			}
 		`,
-        "flipped long": `\
+        "AbyssBox Special": `\
 
             	/* AB Special layout */
 			@media (min-width: 711px) {
 				#beepboxEditorContainer {
 					max-width: initial;
 					height: 100vh;
-					padding-top: 0px;
+					padding-top: 0px !important;
 				}
 				.beepboxEditor {
 					width: 100%;
@@ -30819,6 +31110,9 @@ You should be redirected to the song at:<br /><br />
 				.beepboxEditor.selectRow {
 					height: 2em;
 				}
+				.beepboxEditor .operatorRow {
+					heiht: 2em;
+				}
 				.beepboxEditor .trackAndMuteContainer {
 					max-height: 446px;
 				}
@@ -30828,6 +31122,7 @@ You should be redirected to the song at:<br /><br />
 				}
 				.beepboxEditor .trackAndMuteContainer {
 					scrollbar-width: auto;
+					scrollbar-color: ${ColorConfig.scrollbarColor} ${ColorConfig.uiWidgetBackground} ${ColorConfig.editorBackground};
 				}
 				.beepboxEditor .trackAndMuteContainer::-webkit-scrollbar {
 					width: 20px;
@@ -30845,27 +31140,25 @@ You should be redirected to the song at:<br /><br />
 				}
 			}
 		`,
-        "wide long": `\
+        "long (AB)": `\
 
+			/* focus layout */
 			@media (min-width: 711px) {
 				#beepboxEditorContainer {
 					max-width: initial;
 					height: 100vh;
-					padding-top: 0px;
+					padding-top: 0px !important;
 				}
 				.beepboxEditor {
 					width: 100%;
 					height: 100vh;
 					grid-template-columns: minmax(0, 1fr) 390px; /* minmax(0, 1fr) min-content; Chrome 80 grid layout regression. https://bugs.chromium.org/p/chromium/issues/detail?id=1050307 */
 					grid-template-rows: minmax(481px, 1fr) minmax(0, min-content);
-					grid-template-areas: "pattern-area settings-area" "track-area settings-area";
+					grid-template-areas: "pattern-area settings-area" "track-area";
 				}
 				.beepboxEditor .pattern-area {
 					width: 100%;
 					height: 100%;
-				}
-				.beepboxEditor .track-area {
-					display: flex;
 				}
 				.beepboxEditor .trackAndMuteContainer {
 					width: 100%;
@@ -30903,6 +31196,9 @@ You should be redirected to the song at:<br /><br />
 				.beepboxEditor.selectRow {
 					height: 2em;
 				}
+				.beepboxEditor .operatorRow {
+					heiht: 2em;
+				}
 				.beepboxEditor .trackAndMuteContainer {
 					max-height: 446px;
 				}
@@ -30912,6 +31208,7 @@ You should be redirected to the song at:<br /><br />
 				}
 				.beepboxEditor .trackAndMuteContainer {
 					scrollbar-width: auto;
+					scrollbar-color: ${ColorConfig.scrollbarColor} ${ColorConfig.uiWidgetBackground} ${ColorConfig.editorBackground};
 				}
 				.beepboxEditor .trackAndMuteContainer::-webkit-scrollbar {
 					width: 20px;
@@ -30927,30 +31224,30 @@ You should be redirected to the song at:<br /><br />
 				.beepboxEditor .trackAndMuteContainer::-webkit-scrollbar-corner {
 					background-color: ${ColorConfig.editorBackground};
 				}
+				div.track-area {
+				display: flex;
+				}
 			}
 		`,
-        "focused long": `\
+        "focus": `\
 
-			/* focused long layout */
+			/* focus layout */
 			@media (min-width: 711px) {
 				#beepboxEditorContainer {
 					max-width: initial;
 					height: 100vh;
-					padding-top: 0px;
+					padding-top: 0px !important;
 				}
 				.beepboxEditor {
 					width: 100%;
 					height: 100vh;
 					grid-template-columns: minmax(0, 1fr) 190px; 
 					grid-template-rows: minmax(481px, 1fr) minmax(0, min-content);
-					grid-template-areas: "pattern-area settings-area" "track-area settings-area";
+					grid-template-areas: "pattern-area settings-area" "track-area";
 				}
 				.beepboxEditor .pattern-area {
 					width: 100%;
 					height: 100%;
-				}
-				.beepboxEditor .track-area {
-					display: flex;
 				}
 				.beepboxEditor .trackAndMuteContainer {
 					width: 100%;
@@ -30972,7 +31269,7 @@ You should be redirected to the song at:<br /><br />
 					position: absolute;
 					width: 100%;
 				}
-
+				
 				.beepboxEditor .settings-area {
 					width: 100%;
 					position: relative;
@@ -30992,6 +31289,9 @@ You should be redirected to the song at:<br /><br />
 				.beepboxEditor.selectRow {
 					height: 2em;
 				}
+				.beepboxEditor .operatorRow {
+					heiht: 2em;
+				}
 				.beepboxEditor .trackAndMuteContainer {
 					max-height: 446px;
 				}
@@ -31001,6 +31301,197 @@ You should be redirected to the song at:<br /><br />
 				}
 				.beepboxEditor .trackAndMuteContainer {
 					scrollbar-width: auto;
+					scrollbar-color: ${ColorConfig.scrollbarColor} ${ColorConfig.uiWidgetBackground} ${ColorConfig.editorBackground};
+				}
+				.beepboxEditor .trackAndMuteContainer::-webkit-scrollbar {
+					width: 20px;
+					height: 20px;
+				}
+				.beepboxEditor .trackAndMuteContainer::-webkit-scrollbar-track {
+					background: ${ColorConfig.editorBackground};
+				}
+				.beepboxEditor .trackAndMuteContainer::-webkit-scrollbar-thumb {
+					background-color: ${ColorConfig.uiWidgetBackground};
+					border: 3px solid ${ColorConfig.editorBackground};
+				}
+				.beepboxEditor .trackAndMuteContainer::-webkit-scrollbar-corner {
+					background-color: ${ColorConfig.editorBackground};
+				}
+				div.track-area {
+				display: flex;
+				}
+			}
+		`,
+        "theatre": `\
+
+		/* Theatre layout */
+		@media (min-width: 711px) {
+			#beepboxEditorContainer {
+				max-width: initial;
+				height: 100vh;
+				padding-top: 0px !important;
+			}
+			.beepboxEditor {
+				width: 100%;
+				height: 200vh;
+				grid-template-columns: minmax(0, 1fr) 390px;
+				grid-template-rows: minmax(480px, 50%) minmax(0, 50%);
+				grid-template-areas:
+			"pattern-area pattern-area " 
+			"track-area settings-area";
+			  }			
+			.beepboxEditor .pattern-area {
+				width: 100%;
+				height: 100%;
+			}
+			.beepboxEditor .track-area {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+			.beepboxEditor .trackAndMuteContainer {
+				width: 100%;
+				min-height: 0;
+				flex: 1;
+				overflow: auto;
+				max-height: 97.5vh;
+			}
+			.beepboxEditor .instrument-settings-area {
+				overflow-y: auto;
+				position: relative;
+			}
+			.beepboxEditor .instrument-settings-area > .editor-controls {
+				position: absolute;
+				width: 100%;
+			}
+			.beepboxEditor .song-settings-area {
+				overflow-y: auto;
+			}
+			
+			.beepboxEditor .settings-area {
+				width: 390px;
+				grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+				grid-template-rows: auto auto auto minmax(0, 1fr);
+				grid-template-areas:
+					"instrument-settings-area version-area"
+					"instrument-settings-area play-pause-area"
+					"instrument-settings-area menu-area"
+					"instrument-settings-area song-settings-area";
+			}
+			
+			.beepboxEditor .barScrollBar {
+				display: none;
+			}
+			.beepboxEditor.selectRow {
+				height: 2em;
+			}
+			.beepboxEditor .operatorRow {
+				heiht: 2em;
+			}
+			.beepboxEditor .trackAndMuteContainer {
+				max-height: 100%;
+			}
+
+			.beepboxEditor .trackContainer {
+				overflow: visible;
+			}
+			.beepboxEditor .trackAndMuteContainer {
+				scrollbar-width: auto;
+				scrollbar-color: ${ColorConfig.scrollbarColor} ${ColorConfig.uiWidgetBackground} ${ColorConfig.editorBackground};
+			}
+			.beepboxEditor .trackAndMuteContainer::-webkit-scrollbar {
+				width: 20px;
+				height: 20px;
+			}
+			.beepboxEditor .trackAndMuteContainer::-webkit-scrollbar-track {
+				background: ${ColorConfig.editorBackground};
+			}
+			.beepboxEditor .trackAndMuteContainer::-webkit-scrollbar-thumb {
+				background-color: ${ColorConfig.uiWidgetBackground};
+				border: 3px solid ${ColorConfig.editorBackground};
+			}
+			.beepboxEditor .trackAndMuteContainer::-webkit-scrollbar-corner {
+				background-color: ${ColorConfig.editorBackground};
+			}
+		}
+	`,
+        "Upside Down": `\
+
+				/* Upside Down */
+			@media (min-width: 711px) {
+				#beepboxEditorContainer {
+					max-width: initial;
+					height: 100vh;
+					padding-top: 0px !important;
+				}
+				.beepboxEditor {
+					width: 100%;
+					height: 100vh;
+					grid-template-columns: 195px minmax(0, 1fr);
+					grid-template-rows: minmax(0, min-content) minmax(481px, 1fr);
+					grid-template-areas: "settings-area track-area" "settings-area pattern-area";
+				}
+				.beepboxEditor .pattern-area {
+					width: 100%;
+					height: 100%;
+				}
+				.beepboxEditor .track-area {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+				}
+				.beepboxEditor .trackAndMuteContainer {
+					width: 100%;
+					min-height: 0;
+					flex: 1;
+					overflow: auto;
+					max-height: 97.5vh;
+				}
+				.beepboxEditor .instrument-settings-area {
+					overflow-y: auto;
+					position: relative;
+				}
+				.beepboxEditor .instrument-settings-area > .editor-controls {
+					position: absolute;
+					width: 100%;
+				}
+				.beepboxEditor .song-settings-area {
+					overflow-y: auto;
+				}
+				
+				.beepboxEditor .settings-area {
+					width: 100%;
+					position: relative;
+					overflow-y: auto;
+					grid-template-columns: minmax(0, 1fr);
+					grid-template-rows: auto auto auto auto minmax(0, 1fr);
+					grid-template-areas:
+						"version-area"
+						"play-pause-area"
+						"menu-area"
+						"song-settings-area"
+						"instrument-settings-area";
+				}
+				
+				.beepboxEditor .barScrollBar {
+					display: none;
+				}
+				.beepboxEditor.selectRow {
+					height: 2em;
+				}
+				.beepboxEditor .operatorRow {
+					heiht: 2em;
+				}
+				.beepboxEditor .trackAndMuteContainer {
+					max-height: 446px;
+				}
+
+				.beepboxEditor .trackContainer {
+					overflow: visible;
+				}
+				.beepboxEditor .trackAndMuteContainer {
+					scrollbar-width: auto;
+					scrollbar-color: ${ColorConfig.scrollbarColor} ${ColorConfig.uiWidgetBackground} ${ColorConfig.editorBackground};
 				}
 				.beepboxEditor .trackAndMuteContainer::-webkit-scrollbar {
 					width: 20px;
@@ -31017,7 +31508,7 @@ You should be redirected to the song at:<br /><br />
 					background-color: ${ColorConfig.editorBackground};
 				}
 			}
-		`,
+			`,
     };
     Layout._styleElement = document.head.appendChild(HTML.style({ type: "text/css" }));
 
@@ -32440,7 +32931,22 @@ You should be redirected to the song at:<br /><br />
 						<rect x="21.5" y="2" width="2.5" height="16" fill="currentColor"/>
 						<rect x="7" y="2" width="10" height="16" fill="currentColor"/>
 					</svg>
-				`), div$f("Wide (JB)")), label$1({ class: "layout-option" }, input$a({ type: "radio", name: "layout", value: "wide long" }), SVG(`\
+				`), div$f("Wide (JB)")), label$1({ class: "layout-option" }, input$a({ type: "radio", name: "layout", value: "AbyssBox Special" }), SVG(`\
+					<svg viewBox="-1 -1 28 22">
+						<rect x="0" y="0" width="26" height="20" fill="none" stroke="currentColor" stroke-width="1"/>
+						<rect x="7" y="2" width="4" height="11" fill="currentColor"/>
+						<rect x="2" y="2" width="4" height="11" fill="currentColor"/>
+						<rect x="10" y="2" width="14" height="11" fill="currentColor"/>
+						<rect x="2" y="14" width="22" height="4" fill="currentColor"/>
+					</svg>
+				`), div$f("Flipped (AB)")), label$1({ class: "layout-option" }, input$a({ type: "radio", name: "layout", value: "focus" }), SVG(`\
+					<svg viewBox="-1 -1 28 22">
+						<rect x="0" y="0" width="26" height="20" fill="none" stroke="currentColor" stroke-width="1"/>
+						<rect x="2" y="2" width="17" height="10" fill="currentColor"/>
+						<rect x="20" y="2" width="4" height="16" fill="currentColor"/>
+						<rect x="2" y="13" width="17" height="5" fill="currentColor"/>
+					</svg>
+				`), div$f("Focus (AB)")), label$1({ class: "layout-option" }, input$a({ type: "radio", name: "layout", value: "long (AB)" }), SVG(`\
 					<svg viewBox="-1 -1 28 22">
 						<rect x="0" y="0" width="26" height="20" fill="none" stroke="currentColor" stroke-width="1"/>
 						<rect x="2" y="2" width="12" height="10" fill="currentColor"/>
@@ -32448,23 +32954,23 @@ You should be redirected to the song at:<br /><br />
 						<rect x="20" y="2" width="4" height="16" fill="currentColor"/>
 						<rect x="2" y="13" width="12" height="5" fill="currentColor"/>
 					</svg>
-				`), div$f("Wide Long (AB)")), label$1({ class: "layout-option" }, input$a({ type: "radio", name: "layout", value: "flipped long" }), SVG(`\
+				`), div$f("Long (AB)")), label$1({ class: "layout-option" }, input$a({ type: "radio", name: "layout", value: "theatre" }), SVG(`\
 					<svg viewBox="-1 -1 28 22">
 						<rect x="0" y="0" width="26" height="20" fill="none" stroke="currentColor" stroke-width="1"/>
-						<rect x="2" y="2" width="22" height="2" fill="currentColor"/>
-						<rect x="2" y="5" width="4" height="8" fill="currentColor"/>
-						<rect x="7" y="5" width="17" height="8" fill="currentColor"/>
-						<rect x="2" y="14" width="22" height="4" fill="currentColor"/>
+						<rect x="2" y="2" width="22" height="10" fill="currentColor"></rect>
+						<rect x="2" y="13" width="16" height="5" fill="currentColor"></rect>
+						<rect x="19" y="13" width="2" height="5" fill="currentColor"></rect>
+						<rect x="22" y="13" width="2" height="5" fill="currentColor"></rect>
 					</svg>
-				`), div$f("Flipped Long (AB)")), label$1({ class: "layout-option" }, input$a({ type: "radio", name: "layout", value: "focused long" }), SVG(`\
+				`), div$f("Theatre (AB)")), label$1({ class: "layout-option" }, input$a({ type: "radio", name: "layout", value: "Upside Down" }), SVG(`\
 					<svg viewBox="-1 -1 28 22">
 						<rect x="0" y="0" width="26" height="20" fill="none" stroke="currentColor" stroke-width="1"/>
-						<rect x="2" y="2" width="17" height="10" fill="currentColor"/>
-						<rect x="20" y="2" width="4" height="16" fill="currentColor"/>
-						<rect x="2" y="13" width="17" height="5" fill="currentColor"/>
+						<rect x="7" y="8" width="17" height="10" fill="currentColor"/> /* pattern area */
+						<rect x="2" y="2" width="4" height="16" fill="currentColor"/> /* settings area */
+						<rect x="7" y="2" width="17" height="5" fill="currentColor"/> /* track area */
 					</svg>
-				`), div$f("Focused long (AB)")));
-            this.container = div$f({ class: "prompt noSelection", style: "width: 300px;" }, h2$e("Layout"), this._form, div$f({ style: "display: flex; flex-direction: row-reverse; justify-content: space-between;" }, this._okayButton), this._cancelButton);
+				`), div$f("Upturn (AB)")));
+            this.container = div$f({ class: "prompt noSelection", style: "width: 300px;" }, div$f({ class: "promptTitle" }, h2$e({ class: "layoutExt", style: "text-align: inherit;" }, ""), h2$e({ class: "layoutTitle" }, "Layout")), this._form, div$f({ style: "display: flex; flex-direction: row-reverse; justify-content: space-between;" }, this._okayButton), this._cancelButton);
             this._close = () => {
                 this._doc.undo();
             };
@@ -42581,6 +43087,15 @@ You should be redirected to the song at:<br /><br />
                         }
                         event.preventDefault();
                         break;
+                    case 71:
+                        if (canPlayNotes)
+                            break;
+                        let shortenerStrategy = "https://tinyurl.com/api-create.php?url=";
+                        const localShortenerStrategy = window.localStorage.getItem("shortenerStrategySelect");
+                        if (localShortenerStrategy == "isgd")
+                            shortenerStrategy = "https://is.gd/create.php?format=simple&url=";
+                        window.open(shortenerStrategy + encodeURIComponent(new URL("#" + this._doc.song.toBase64String(), location.href).href));
+                        break;
                     case 90:
                         if (canPlayNotes)
                             break;
@@ -45837,7 +46352,7 @@ You should be redirected to the song at:<br /><br />
             this.autoPlay = window.localStorage.getItem("autoPlay") == "true";
             this.autoFollow = window.localStorage.getItem("autoFollow") != "false";
             this.enableNotePreview = window.localStorage.getItem("enableNotePreview") != "false";
-            this.showFifth = window.localStorage.getItem("showFifth") == "true";
+            this.showFifth = window.localStorage.getItem("showFifth") != "false";
             this.notesOutsideScale = window.localStorage.getItem("notesOutsideScale") != "false";
             this.showLetters = window.localStorage.getItem("showLetters") != "false";
             this.showChannels = window.localStorage.getItem("showChannels") != "false";
