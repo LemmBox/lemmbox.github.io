@@ -221,4 +221,8 @@ p {
 
 .footer {
     margin-top: auto;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }

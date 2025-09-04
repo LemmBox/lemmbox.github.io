@@ -17,7 +17,7 @@
     <title>LemmBox</title>
     <meta name="application-name" content="LemmBox" />
     <meta name="apple-mobile-web-app-title" content="LemmBox">
-    <meta name="description" content="LemmBox is a mod of UltraBox." />
+    <meta name="description" content="LemmBox is an online tool for sketching and sharing instrumental music. " />
     <meta name="keywords" content="chiptune, instrumental, music, song, melody, composition, tool, free, online, square wave, NES, NSF, ultrabox, beepbox, jummbox, pandorasbox, modbox, sandbox, goldbox, wackybox, todbox, LemmBox" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -47,6 +47,7 @@ html {
     line-height: 1.3;
     color: var(--primary-text, white);
 }
+
 
         body {
             margin: auto;
@@ -274,7 +275,6 @@ html {
 
 button {
     margin-top: 15px;
-    padding: 10px 15px;
     border: 0;
     border-radius: 100px;
     background-color: #fff570;
@@ -355,7 +355,7 @@ transition: transform 0.3s ease;
 
 
   <div class="navbartitle">
-    <h1><font id="LemmClicker">LemmBox</font><span id="goldboxPlant" style="display: inline; color:#62a13b"></span></h1>
+    <h1><font id="LemmClicker">LemmBox </font><span id="goldboxPlant" style="display: inline; color:#62a13b"></span></h1>
     <!-- <details>
         <summary>Shop</summary>
         <button class="shopitem" id="tree" ><img src="media/Tree.png" width="64px" height="64px">Tree + 0.1 per sec</button>
@@ -365,9 +365,9 @@ transition: transform 0.3s ease;
 </nav>
 
             <p id="introduction">
-                LemmBox is a modification of UltraBox that tries to add features found in other mods alongside some of its own. You can find the full feature set <a href="./lemmbox-features.html">here</a> This mod is based off of UltraBox. You can find UltraBox <a href="https://ultraabox.github.io">here</a>
+                LemmBox is a modification of UltraBox that tries to add features found in other mods alongside some of its own. You can find the full feature set <a href="./lemmbox-features" target="_blank" rel="noopener noreferrer">here</a> This mod is based off of UltraBox. You can find UltraBox <a href="https://ultraabox.github.io" target="_blank" rel="noopener noreferrer">here</a>
 				<br><br>
-                It takes elements from most of the beepbox mods available (see <a href="./credits.html">credits</a>) and puts them in one convenient package.
+                It takes elements from most of the beepbox mods available (see <a href="./credits" target="_blank" rel="noopener noreferrer">credits</a>) and puts them in one convenient package.
             </p>
             <!-- <p>
                 All song data is contained in the URL at the top of your browser.
@@ -375,9 +375,9 @@ transition: transform 0.3s ease;
                 When you are satisfied with your song, just copy and paste the URL to save and share your song!
             </p> -->
             <p>
-                If you have any questions, please visit the <a href="./faq.html">FAQ</a>.
+                If you have any questions, please visit the <a href="./faq" target="_blank" rel="noopener noreferrer">FAQ</a>.
             </p>
-            <p>A list of all updates and changes can be found in the <a href="./patch_notes.html">patch notes</a>.</p>
+            <p>A list of all updates and changes can be found in the <a href="./patch_notes" target="_blank" rel="noopener noreferrer">patch notes</a>.</p>
 			<br><br>
 			
             <!--
@@ -464,8 +464,8 @@ transition: transform 0.3s ease;
 							<li><b>[ ]</b>: move playhead backward or forward</li>
 							<li><b>F/H</b>: move to First or Highlighted pattern </li>
 							<li><b>Shift & Drag</b>: select part of a pattern</li>
-							<li>These are just a few shortcuts, check LemmBox's edit menu for more!</li>
                             <li><b>G</b>: Shorten song URL</li>
+                            <li>These are just a few shortcuts, check LemmBox's edit menu for more!</li>
                             <!-- need to edit this eventually -->
                         </ul>
                     </div>
@@ -509,8 +509,9 @@ transition: transform 0.3s ease;
     <script type="text/javascript" src="beepbox_editor.min.js"></script>
     -->
 
-    
-
+<div class="footer">
+  <footer class="navbartitle col footertext">Submit any issues you find on LemmBox's issues page on<a class="footerlinks" target="_blank" rel="noopener noreferrer" href="https://github.com/LemmBox/LemmBox_typescript/issues">GitHub!</a></footer>
+</div>
 <script type="text/javascript">
 
     // Randomize display of header
@@ -531,16 +532,38 @@ transition: transform 0.3s ease;
         // dogebox2 plants 
         "🍕", '<img id="Hotdog" src="theme_resources/hotdog.png" width="62.5" height="41.625" onclick="myFunction()"> <audio id="squish1" src="media/squish1.mp3" type="audio/mpeg"></audio><audio id="squish2" src="media/squish2.mp3" type="audio/mpeg"></audio><audio id="squish3" src="media/squish3.mp3" type="audio/mpeg"></audio>', "🍔", "🍟",
         // Slarmoo's Box plants
-        "✨", "🌈", "🌧️", "🪨", "🐍", "🌲", "🌳", "𓆏", "🦀",
+        "✨","🌈","🌧️","🪨","🐍","🌲","🌳","𓆏","🦀","🍄‍🟫","🌵","and Bobby","🥚",
         // LemmBox 
         "🍋",
         `<div class="logo-wrapper">
         <img src="theme_resources/LemmBoxLogo.png" alt="LemmBox" class="logo lemon nosel" height="64px" onclick="lemonClicker(event)">
         <img src="theme_resources/LemmBoxLogo.png" alt="" class="logo-glow lemon nosel" height="64px" onclick="lemonClicker(event)" aria-hidden="true">
-        </div>`,'<img id="Hotdog" src="theme_resources/hotdog.png" width="62.5" height="41.625" onclick="myFunction()"> <audio id="squish1" src="media/squish1.mp3" type="audio/mpeg"></audio><audio id="squish2" src="media/squish2.mp3" type="audio/mpeg"></audio><audio id="squish3" src="media/squish3.mp3" type="audio/mpeg"></audio>'
+        </div>`,'<img id="Hotdog" src="theme_resources/hotdog.png" width="62.5" height="41.625" onclick="myFunction()"> <audio id="squish1" src="media/squish1.mp3" type="audio/mpeg"></audio><audio id="squish2" src="media/squish2.mp3" type="audio/mpeg"></audio><audio id="squish3" src="media/squish3.mp3" type="audio/mpeg"></audio>',"asdfjoiksop! ,!!","Hi! I'm Mr. Buying!","i am in lemmbox"
     ];
-
+                                                                                                                                                                                                                                                                                                                                            // User suggested plants
+const date = new Date();
+            //Slarmoo's Box holiday plants
+            const winterPlants = ["🎄", "🍪", "☃️", "🎁", "❄️"];
+            if ((date.getDate() >= 22 && date.getDate() <= 26) && date.getMonth() == 11) {
+                document.getElementById("goldboxPlant").innerHTML = "  " + winterPlants[(Math.floor(Math.random() * winterPlants.length))];
+            }
+            //Slarmoo's Box Halloween plants
+            const spookyPlants = ["🎃", "🍬", "👻", "🐍", "🧪"];
+            if ((date.getDate() == 31) && date.getMonth() == 9) {
+                document.getElementById("goldboxPlant").innerHTML = "  " + spookyPlants[(Math.floor(Math.random() * spookyPlants.length))];
+            }
+            //Slarmoo's Box valentines plants
+            const heartPlants = ["❤️", "🧡", "💛", "💚", "💙", "💜"];
+            if ((date.getDate() >= 13 && date.getDate() <= 15) && date.getMonth() == 1) {
+                document.getElementById("goldboxPlant").innerHTML = "  " + heartPlants[(Math.floor(Math.random() * heartPlants.length))];
+            }
+            //Slarmoo's Box pi day plants
+            if ((date.getDate() == 14) && date.getMonth() == 2) {
+                const piePlants = ["π", "🥧", "🍏", "🍋", "3.1415926535897932384626"];
+                document.getElementById("goldboxPlant").innerHTML = "  " + piePlants[(Math.floor(Math.random() * piePlants.length))];
+            }
         const plant = plants[Math.floor(Math.random() * plants.length)];
+        
 
         // Use innerHTML for actual HTML, textContent otherwise
         if (plant.includes("<") && plant.includes(">")) {
@@ -549,8 +572,6 @@ transition: transform 0.3s ease;
             document.getElementById("goldboxPlant").textContent = "  " + plant;
         }
     
-
-    const date = new Date();
 
     // LB birthday (Jan 7th)
     if ((date.getDate() == 7) && date.getMonth() == 1) {

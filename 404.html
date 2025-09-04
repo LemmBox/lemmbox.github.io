@@ -8,57 +8,239 @@
 	<meta property="og:image" content="/icon_maskable_192.png" />
 	<meta name="description" content="LemmBox is a mod of BeepBox that aims to combine every other beepmod into one." />
     <title>LemmBox 404</title>
-    <style type="text/css">
+    <script src="hotdog.js"></script>
+    <audio id="squish1" src="media/squish1.mp3" type="audio/mpeg"></audio>    
+    <audio id="squish2" src="media/squish2.mp3" type="audio/mpeg"></audio>
+    <audio id="squish3" src="media/squish3.mp3" type="audio/mpeg"></audio>
+    <audio id="explode" src="media/explode.mp3" type="audio/mpeg"></audio>
+<style type="text/css">
+html {
+    background: var(--page-margin, #020009);
+    overflow-x: hidden;
+    font-size: large;
+    font-family: 'B612', sans-serif;
+    line-height: 1.3;
+    color: var(--primary-text, white);
+}
 
-        html {
-            background: var(--page-margin, black);
-            overflow-x: hidden;
-            font-size: large;
-            font-family: 'B612', sans-serif;
-            line-height: 1.3;
-            color: var(--primary-text, white);
-        }
+body {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+}
 
-        body {
-            margin: auto;
-            overflow-x: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            align-content: center;
-        }
+h1 {
+    font-size: 1.7rem;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    -webkit-text-stroke-width: 0;
+    color: var(--mod-title, #800000);
+}
 
-        h1 {
-            font-size: 1.7rem;
-            text-align: center;
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-            -webkit-text-stroke-width: 0;
-        }
+h1.title {
+    color: #fff570;
+}
 
-        h2 {
-            font-size: 1.5rem;
-            text-align: center;
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-            -webkit-text-stroke-width: 0;
-        }
+p {
+    font-size: 0.8rem;
+    color: #9C9BA3;
+    text-align: center;
+}
 
-        a {
-            color: var(--link-accent, #98f);
-        }
-    </style>
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #fff570;
+    color: #020009;
+    font-weight: bold;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 0 20px #fff57050;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #e6da4c;
+    transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+.navbar {
+    color: #f2f3f5;
+    font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #020009;
+    text-align: left;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.col, .logo {
+    flex: 1 1 0px;
+}
+
+.navbartitle {
+    color: #f2f3f5;
+    background-color: #020009;
+    text-align: center;
+    font-family: 'B612', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+.navbarlinks {
+    color: #f2f3f5;
+    background-color: #020009;
+    text-align: right;
+    padding-left: 5px;
+    float: right;
+    font-family: 'B612', sans-serif;
+    cursor: pointer;
+}
+
+.logo-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.logo {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.logo-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: blur(8px) brightness(1.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.logo-wrapper:hover .logo {
+    transform: scale(1.1);
+}
+
+.logo-wrapper:hover .logo-glow {
+    opacity: 1;
+}
+
+.footertext {
+    font-size:11px;
+    color: #868c95;
+    text-align: center;
+    font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.footerlinks {
+    color: #f2f3f5;
+    font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: right;
+    padding-left: 5px;
+    float: right;
+    font-size: 11px;
+}
+
+.footer {
+    margin-top: auto;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#Hotdog {
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 1100px) {
+    body {
+        width: 1100px;
+    }
+}
+</style>
   </body>
-<!--<font color="#FF8EC5">404</font>-->
-<h1>... oops.</h1>
 
-<p>So it seems that, for whatever reason, you hit a 404.</p>  
-<!-- <h1><img id="404" src="uh_oh_404.png" /></h1>
-  
-  <audio controls="false" autoplay="true" loop="true">
-  <source src="Game_Over.ogg" type="audio/ogg">
-  Your browser does not support the audio element.
-</audio>  -->
+<nav class="navbar">
+  <a title="Click to go back to homepage" href="https://lemmbox.github.io">
+    <div class="logo-wrapper">
+      <img src="theme_resources/LemmBoxLogo.png" alt="LemmBox" class="logo" height="64px">
+      <img src="theme_resources/LemmBoxLogo.png" alt="" class="logo-glow" height="64px" aria-hidden="true">
+    </div>
+  </a>
+  <div class="navbartitle col"><b>Error 404 - Page not found.</b></div>
+  <div class="col">
+    <a class="navbarlinks" href="patch_notes"><button>Patch Notes</button></a>
+    <a class="navbarlinks" href="lemmbox-features"><button>Features</button></a>
+    <a class="navbarlinks" onclick="history.back()"><button>Go Back</button></a>
+  </div>
+</nav>
+
+    <h1><font>Error 404 - </font><span id="goldboxPlant" style="display: inline; color:#800000"></span></h1>
+
+
+<div class="footer">
+<nav class="navbar">
+  <div class="col"></div>
+  <footer class="navbartitle col footertext">LemmBox | Error 404 - Page not found. </footer>
+  <div class="col">
+    <a class="footerlinks" href="https://lemmbox.github.io">Home</a>
+    <a class="footerlinks" onclick="history.back()">Go Back</a>
+  </div>
+</nav>
+</div>
+
+
+<script type="text/javascript">
+
+    // Randomize display of header
+
+    const plants = [
+        "Page not found", "May I offer you a nice hotdog in this trying time? " + '<img id="Hotdog" src="theme_resources/hotdog.png" width="620.5" height="410.625" onclick="myFunction()"> <audio id="squish1" src="media/squish1.mp3" type="audio/mpeg"></audio><audio id="squish2" src="media/squish2.mp3" type="audio/mpeg"></audio><audio id="squish3" src="media/squish3.mp3" type="audio/mpeg"></audio>', "Page not found...", "Page not found, come back next year.", "I found the page, but it is MINE. I am NOT giving it up that easily." + '<br><p>smh...</p>'
+    ];
+
+        const date = new Date();
+        
+        const plant = plants[Math.floor(Math.random() * plants.length)];
+        
+
+        // Use innerHTML for actual HTML, textContent otherwise
+        if (plant.includes("<") && plant.includes(">")) {
+            document.getElementById("goldboxPlant").innerHTML = plant;
+        } else {
+            document.getElementById("goldboxPlant").textContent = "  " + plant;
+        }
+    
+
+    // LB birthday (Jan 7th)
+    if ((date.getDate() == 7) && date.getMonth() == 1) {
+        document.getElementById("goldboxPlant").innerHTML = "Even in my birthday, the page is still not found...";  
+    }
+
+    function changeHotdogSize() {
+        var image = document.getElementById('Hotdog');
+        image.width = Math.random() * (750 - 20) + 20;
+        image.height = Math.random() * (499 - 20) + 20;
+    }
+
+</script>
+
+
 	
 </body>
 </html>

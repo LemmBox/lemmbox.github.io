@@ -7071,7 +7071,7 @@ var beepbox = (function (exports) {
     --ui-widget-focus: #2d293b;
     --pitch-background: #44444A;
     --tonic: #c2a855;
-    --fifth-note: #6e9166;
+    --fifth-note: #a0cd7c;
     --third-note: #486;
     --white-piano-key: #bbb;
     --black-piano-key: #444;
