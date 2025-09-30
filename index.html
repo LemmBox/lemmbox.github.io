@@ -575,7 +575,19 @@ const date = new Date();
 
     // LB birthday (Jan 7th)
     if ((date.getDate() == 7) && date.getMonth() == 1) {
-        document.getElementById("goldboxPlant").innerHTML = "  🍋🎂🎉 :D";  
+        document.getElementById("goldboxPlant").innerHTML = "  🍋📦🎂🎉 :D";  
+    }
+    // LemmBox's dev birthday :3
+    if ((date.getDate() == 16) && date.getMonth() == 1) {
+        document.getElementById("goldboxPlant").innerHTML = "  🍋🍋‍🟩🎂🎉 :3";  
+    }
+
+    // Halloween plants
+    const halloweenPlants = ["Spooky month is apon us 🎃","🍋 Spooky lemon",".˚⊹.🎃₊˚𖦹⋆",".𖥔 ݁ ˖🕸️🕷.𖥔 ݁ ˖","🎃","👻","🍬","🦇","💀","🕷️🕸️🎃","BOO!","10 more days 💀","*kills u*","almost spooky time","<--- evil","dead but silly 👻","🍋🕷️🕸️x_x","Happy birthday 🐟","<--- not spooky 👎","🍋🕸️ am stuck :c","🍋🕷️🕸️x_x","🕷️🕸️","𓆩^._.^𓆪","🔮 🐈‍⬛ 🌙","🧟 brainz or something","🧡","anyone have a goat?","grahh 🧌","🐈‍⬛","snapchat be like 👻","🦇 ALMOST HALLOWEEN 🎃","🎃 HAPPY HALLOWEEN 👻"];
+    const dayofmonth = new Date();
+    if (dayofmonth.getMonth() === 9) {
+    const day = dayofmonth.getDate();
+    document.getElementById("goldboxPlant").innerHTML = halloweenPlants[day - 1];
     }
 
     function changeHotdogSize() {

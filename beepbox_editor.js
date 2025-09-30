@@ -7069,7 +7069,7 @@ var beepbox = (function (exports) {
     --link-accent: #fff570;
     --ui-widget-background: #191721;
     --ui-widget-focus: #2d293b;
-    --pitch-background: #44444A;
+    --pitch-background: #443d4a;
     --tonic: #c2a855;
     --fifth-note: #a0cd7c;
     --third-note: #486;

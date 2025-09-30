@@ -226,3 +226,23 @@ p {
     bottom: 0;
     width: 100%;
 }
+
+.beforeafter1 {
+    background-color: #44444A;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 2px 6px;
+    color: white;
+    font-family: monospace;
+    border: 1.75px solid #333333;
+}
+
+.beforeafter2 {
+    background-color: #443d4a;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 2px 6px;
+    color: white;
+    font-family: monospace;
+    border: 1.75px solid #2a252e;
+}
